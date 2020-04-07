@@ -1,0 +1,14 @@
+@mixin buttonStyles {
+    font-size: rem(10px);
+    @include sm(font-size, rem(15px));
+    font-family: $fontRoboto;
+    color: #fff;
+    background-color: $mainBlueColor;
+    padding: 10px 12px;
+    @include sm(padding, 10px 20px);
+    text-transform: uppercase;
+    border-radius: 4px;
+    @media screen and (min-width: 360px) {
+    	font-size: rem(12px);
+    }
+}

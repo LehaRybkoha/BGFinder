@@ -1,0 +1,25 @@
+<section class="company">
+	<div class="container company-wrapper">
+		<div class="company-main">
+			<div class="company-main__title">
+				<h2 class="company-main__title-text">О компании</h2>
+				<hr class="company-line">
+			</div>
+			<div class="company-main__desc">
+				<p class="company-main__desc-text company-main__desc-text--one">Группа компаний «Бизнес-финанс» объединяет в себе ряд кредитных и страховых организаций для упрощенного и ускоренного предоставления банковских услуг.</p>
+				<p class="company-main__desc-text company-main__desc-text--two">Мы на рынке финансовых услуг и консалтинга в области госзакупок с 2011 года и делимся накопленным опытом со своими партнёрами. За это время нашими клиентами стали многие известные компании энергетики, строительства, торговли, транспорта, связи и др. Все это благодаря стратегии:</p>
+				<p class="company-main__desc-text company-main__desc-text--three">Комплексное обслуживание корпоративных клиентов; сохранение максимальной надежности и соблюдение требований законодательства; персональный подход; строгое выполнение взятых на себя обязательств в рамках достигнутых договоренностей; взаимовыгодность и долгосрочность сотрудничеств</p>
+			</div>
+		</div>	
+		<div class="company-advantages">
+			<div class="company-advantages__title">
+				<h3 class="company-advantages__title-text">Преимущества работы с нами</h3>
+			</div>
+			<ul class="company-advantages__list">
+				<li class="company-advantages__item" v-for="item in companyList" :key="item.companyList">
+					<p class="company-advantages__item-text"><img src="/img/checkCompany.svg" alt="Check icon" class="company-advantages__item-pic"> {{ item.companyListText }}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

@@ -4,11 +4,11 @@
 			<template v-if="$vssWidth < 768">
 				<nav class="nav">
 					<transition name="fade" mode="out-in">
-						<i class="fas fa-bars navOpen" v-if="!show" @click="show = !show" key="open"></i>
-						<i class="fas fa-times navClose" v-else="!close" @click="show = !show" key="close"></i>
+						<i class="fas fa-bars navOpen" v-if="!showNav" @click="showNav = !showNav" key="open"></i>
+						<i class="fas fa-times navClose" v-else="!close" @click="showNav = !showNav" key="close"></i>
 					</transition>
 					<transition name="fade">
-						<ul class="nav__list" v-if="show">
+						<ul class="nav__list" v-if="showNav">
 							<h3 class="nav-title">Меню</h3>
 							<li class="nav__item" v-for="item in navList" :key="item.navList">
 								<a :href="item.navLinks" class="nav__item-link">{{ item.navOption }}</a>

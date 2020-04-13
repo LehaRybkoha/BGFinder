@@ -1,0 +1,53 @@
+<footer class="footer">
+	<div class="container-fluid footer-wrapper"> 
+		<div class="footer-top">
+			<div class="footer-top-wrapper">
+				<div class="footer-top__title">
+					<p class="footer-top__title-text">Мы проконсультируем вас по любым вопросам</p>
+					<ul class="footer-top__list">
+						<li class="footer-top__item">
+							<a href="tel:+78005557881" class="footer-top__item-link"><i class="fas fa-phone-alt footer-top__item-icon"></i>8 (800) 555-78-81</a>
+						</li>
+						<li class="footer-top__item">
+							<a href="mailto:info.finance@gmail.com" class="footer-top__item-link"><i class="fas fa-envelope footer-top__item-icon"></i>info.finance@gmail.com</a>
+						</li>
+						<li class="footer-top__item">
+							<a href="" class="footer-top__item-link"><i class="fab fa-telegram-plane footer-top__item-icon"></i>Telegram</a>
+						</li>
+					</ul>
+				</div>
+			<form action="" method="post" class="footer-top__form">
+				<p class="footer-top__form-title">Форма обратной связи</p>
+				<div class="footer-top__form-content">
+				<input type="text" name="name" placeholder="Ваше Имя" class="footer-top__form-input">
+				<input type="email" name="email" placeholder="Ваш Email" class="footer-top__form-input">
+				<textarea name="" id="" placeholder="Ваше Сообщение..." cols="30" rows="10" class="footer-top__form-textarea"></textarea>
+				<button type="submit" class="footer-top__form-submit">Отправить</button>
+					
+				</div>
+			</form>
+		</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer-bottom__list-wrapper">
+				<ul class="footer-bottom__list">
+					<p class="footer-bottom__list-title">Финансовые продукты</p>
+					<li class="footer-bottom__item" v-for="item in footerListTwo" :key="item.footerListOne">
+						<a href="#" class="footer-bottom__item-link">{{ item.footerLink }}</a>
+					</li>
+				</ul>
+				<ul class="footer-bottom__list">
+					<p class="footer-bottom__list-title">Банковские Гарантии по 44-ФЗ</p>
+					<li class="footer-bottom__item" v-for="item in footerListTwo" :key="item.footerListTwo">
+						<a href="#" class="footer-bottom__item-link">{{ item.footerLink }}</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-bottom__icons">
+				<i class="fab fa-facebook-f footer-bottom__icons-icon"></i>
+				<i class="fab fa-twitter footer-bottom__icons-icon"></i>
+				<i class="fab fa-telegram-plane footer-bottom__icons-icon"></i>
+			</div>
+		</div>
+	</div>
+</footer>

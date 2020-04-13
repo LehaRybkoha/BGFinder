@@ -1,0 +1,186 @@
+
+.footer {
+	&-top {
+		padding: 25px 25px 0 25px;
+		background: url(/img/footerBg.png);
+		background-size: cover;
+		background-repeat: no-repeat;
+		@include xl(padding, 25px 25px 90px 25px);
+		&-wrapper {
+			@include md(display, flex);
+			@include md(margin, 0 auto);
+			@include md(justify-content, space-around);
+    		@include md(max-width, 690px);
+		    @include lg(max-width, 930px);
+		    @include xl(max-width, 1110px);
+		}
+		&__title {
+			margin-bottom: 25px;
+			&-text {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(18px);
+				text-align: center;
+				color: #fff;
+				margin: 30px auto;
+				@include md(max-width, 280px);
+				@include md(text-align, left);
+				@include md(font-size, rem(22px));
+				@include lg(font-size, rem(32px));
+				@include lg(max-width, 410px);
+				@include xl(font-size, rem(46px));
+				@include lg(max-width, 575px);
+			}
+		}
+		&__list {
+			max-width: max-content;
+			margin: 0 auto;
+			@include md(margin, 0);
+		}
+		&__item {
+			margin-bottom: 20px;
+			&-link {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(12px);
+				color: #fff;
+				@include md(font-size, rem(20px));
+			}
+			&-icon {
+				padding-right: 17px;
+			}
+		}
+		&__form {
+			padding: 20px;
+			@include lg(padding, 40px);
+			@include xl(padding, 70px);
+			background-color: #fff;
+			border: 1px solid #fff;
+			border-radius: 10px;
+			z-index: 10;
+			position: relative;
+			max-width: 264px;
+			margin: 0 auto -60px auto;
+			box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+			@include md(margin, 0 0 -60px 0);
+			@include lg(max-width, 390px);
+			@include xl(max-width, 546px);
+			@include xl(margin, 0 0 -160px 0);
+			&-content {
+				@include lg(max-width, 390px);
+				@include xl(max-width, 546px);
+			}
+			&-title {
+				font-family: $fontRoboto;
+				font-size: rem(14px);
+				color: #212B36;
+				text-align: center;
+				margin-bottom: 18px;
+				@include xl(margin-bottom, 50px);
+				@include lg(font-size, rem(22px));
+				@include xl(font-size, rem(36px));
+			}
+			&-input {
+				font-family: $fontRoboto;
+				font-size: rem(8px);
+				color: #4A4A4A;
+				padding-left: 10px;
+				height: 25px;
+				width: 200px;
+				margin-bottom: 13px;
+				border: 1px solid darker(#F5F7F9, 8);
+				border-radius: 4px;
+				@include xl(margin-bottom, 18px);
+				@include lg(font-size, rem(14px));
+				@include lg(height, 35px);
+				@include lg(width, 284px);
+				@include xl(width, 400px);
+				@include xl(height, 50px);
+				@include xl(font-size, rem(14px));
+			}
+			&-textarea {
+				font-family: $fontRoboto;
+				font-size: rem(8px);
+				color: #4A4A4A;
+				height: 83px;
+				width: 200px;
+				margin-bottom: 13px;
+				text-indent: 10px;
+				padding-top: 5px;
+				resize: none;
+				border: 1px solid darker(#F5F7F9, 8);
+				border-radius: 4px;
+				@include xl(margin-bottom, 35px);
+				@include lg(font-size, rem(14px));
+				@include lg(width, 284px);
+				@include xl(width, 400px);
+				@include xl(height, 50px);
+				@include xl(font-size, rem(14px));
+				@include xl(padding-top, 15px);
+			}
+			&-submit {
+				@include buttonStyles;
+				@include lg(padding, 15px 40px);
+				@include xl(font-size, rem(16px));
+				@include xl(padding, 15px 60px);
+			}
+		}
+	}
+	&-bottom {
+		padding: 90px 25px 25px 25px;
+		background-color: #2A5082;
+		@include md(display, flex);
+		@include md(justify-content, space-around);
+		@include md(padding, 25px);
+		&__icons {
+			margin-top: 40px;
+			display: flex;
+			justify-content: center;
+			@include md(align-items, center);
+			@include xl(margin-top, 80px);
+			&-icon {
+				border: 3px solid darker(#F5F7F9, 8);
+				padding: 10px;
+				border-radius: 100%;
+				color: #fff;
+				margin-right: 20px;
+				@include lg(font-size, rem(20px));
+				@include xl(font-size, rem(25px));
+				@include xl(padding, 20px);
+			}
+		}
+		&__list {
+			margin-right: 40px;
+			&-wrapper {
+				display: flex;
+				justify-content: space-around;
+				@include md(justify-content, flex-start);
+			}
+			&-title {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(10px);
+				text-transform: uppercase;
+				color: #fff;
+				margin-bottom: 20px;
+				@include lg(font-size, rem(14px));
+				@include xl(font-size, rem(16px));
+			}
+		}
+		&__item {
+			margin-bottom: 5px;
+			&-link {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(8px);
+				color: #fff;
+				@include lg(font-size, rem(12px));
+				@include xl(font-size, rem(14px));
+			}
+		}
+	}
+}
+
+.fa-telelgram-plane {
+	margin-right: 0;
+}

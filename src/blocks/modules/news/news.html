@@ -1,0 +1,50 @@
+<section class="news">
+	<div class="container-fluid news-wrapper">
+		<div class="news__title">
+			<h2 class="news__title-text">Лента новостей из блога</h2>
+			<hr class="news__title-line">
+			<p class="news__title-desc">Актуальная информация из банковской сферы, новости и обзоры на популярный продукты, а также советы от экспертов и многое другое в нашей ленте.</p>
+		</div>
+		<div class="news-feedblog-wrapper">
+			<div class="news-blog">
+				<ul class="news-blog__list">
+					<li class="news-blog__item" v-for="item in newsList" :key="item.newsList">
+						<div class="news-blog__item-left">
+							<img :src="item.newsPic" alt="Blog Preview" class="news-blog__item-left-pic">
+						</div>
+						<div class="news-blog__item-right">
+							<div class="news-blog__item-right-head">
+								<a href="#" class="news-blog__item-right-head--text">Советы Экспертов</a>
+								<a href="#" class="news-blog__item-right-head--text">Банковские гарантии</a>
+							</div>
+							<div class="news-blog__item-right-main">
+								<p class="news-blog__item-right-main--text">
+									{{ item.newsText }}
+								</p>
+							</div>
+							<div class="news-blog__item-right-footer">
+								<span class="news-blog__item-right-footer--text">12 марта 2020</span>
+								<a href="#" class="news-blog__item-right-footer--button">Читать</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="news-feedback">
+				<div class="news-feedback__link">
+					<hr class="news-feedback__link-line">
+					<h3 class="news-feedback__link-title">Блог о банковских гарантиях и не только</h3>
+					<p class="news-feedback__link-desc">Актуальная информация из банковской сферы, новости и обзоры на популярный продукты, а также советы от экспертов и многое другое в нашей ленте.</p>
+					<div class="news-feedback__link-block">
+						<a href="#" class="news-feedback__link-block-text">Перейти к блогу</a>
+					</div>
+				</div>
+				<div class="news-feedback__application">
+					<hr class="news-feedback__application-line">
+					<p class="news-feedback__application-text">Подайте заявку, и мы с Вами свяжемся</p>
+					<a href="#" class="news-feedback__application-button">Подать заявку</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

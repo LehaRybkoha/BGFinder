@@ -70,11 +70,17 @@
         "yargs": "^12.0.5"
     },
     "dependencies": {
+        "date-fns": "^2.11.1",
         "jquery": "^3.4.1",
+        "moment": "^2.24.0",
         "smart-grid": "^2.1.2",
         "vue": "^2.6.11",
+        "vue-airbnb-style-datepicker": "^2.7.1",
         "vue-router": "^3.1.6",
         "vue-screen-size": "^1.0.1",
+        "vue-slider-component": "^3.1.1",
+        "vuejs-datepicker": "^1.6.2",
+        "vuejs-range-datepickers": "^2.0.0",
         "vuetify": "^2.2.20"
     },
     "peerDependencies": {

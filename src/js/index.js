@@ -20,6 +20,7 @@ let app = new Vue({
   },
   data: {
     showNav:false,
+    showFas: 'isShowSearch',
     dateFormat: 'YYYY-MM-D',
     dateOne: '',
     dateTwo: '',
@@ -170,7 +171,7 @@ let app = new Vue({
     ],
   },
   methods: {
-     formatDates(dateOne, dateTwo) {
+    formatDates(dateOne, dateTwo) {
       let formattedDates = ''
       if (dateOne) {
         formattedDates = format(dateOne, this.dateFormat)
@@ -179,7 +180,7 @@ let app = new Vue({
         formattedDates += ' - ' + format(dateTwo, this.dateFormat)
       }
       return formattedDates
-    }
+    },
   },
 });
 

@@ -1,17 +1,14 @@
 import Vue from 'vue';
 import VueScreenSize from 'vue-screen-size';
 import VueSlider from 'vue-slider-component';
+import VueCarousel from 'vue-carousel';
 import { format, formatDistance, formatRelative, subDays } from './import/date_fns';
 import AirbnbStyleDatepicker from './import/vue-airbnb-style-datepicker';
 import "./import/modules.js";
-$.fn.hasAttr = function(name) {
-   return this.attr(name) !== undefined;
-};
-var datepickerOptions = {
-  
-}
+var datepickerOptions = {}
 Vue.use(AirbnbStyleDatepicker, datepickerOptions)
 Vue.use(VueScreenSize);
+Vue.use(VueCarousel);
 
 let app = new Vue({
   el: '#wrapper',
@@ -21,6 +18,7 @@ let app = new Vue({
   data: {
     showNav:false,
     showFas: 'isShowSearch',
+    showBlog: 'isShowTags',
     dateFormat: 'YYYY-MM-D',
     dateOne: '',
     dateTwo: '',
@@ -167,6 +165,23 @@ let app = new Vue({
       },
       { 
         footerLink: 'Гарантийные Обязательства',
+      },
+    ],
+    blogList: [
+      { 
+        blogPic: '/img/newsPic1.png',
+        blogText: 'Плюсы и минусы банковских гарантий',
+        blogLink: '/index.html'
+      },
+      { 
+        blogPic: '/img/newsPic2.png',
+        blogText: 'Банковская гарантия: ее риски при использовании в тендерах',
+        blogLink: '/search.html'
+      },
+      { 
+        blogPic: '/img/newsPic3.png',
+        blogText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus porro distinctio, similique repellendus aperiam tempora iusto possimus sint, quas excepturi ratione. Eos ratione nostrum, sit corporis dignissimos voluptatem debitis obcaecati!',
+        blogLink: '/blog.html'
       },
     ],
   },

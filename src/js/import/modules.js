@@ -10,3 +10,4 @@ import "%modules%/news/news";
 //pages
 import "%modules%/search/search";
 import "%modules%/blog/blog";
+import "%modules%/article/article";

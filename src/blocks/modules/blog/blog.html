@@ -13,8 +13,183 @@
 			<p class="blog__title-desc">Мы приглашаем компетентных экспертов в области финансовой безопасности, тендерных специалистов и банковских специалистов, чтобы они помогали нашим читателям накапливатьопыт и получать практические знания.</p>
 		</div>
 		<div class="blog__search">
-			<input type="text" class="blog__search-input">
-			<button type="button" class="blog__search-button"></button>
+			<input type="text" placeholder="Поиск по темам" class="blog__search-input">
+			<button type="button" class="blog__search-button"><i class="fas fa-search blog__search-burron-icon"></i></button>
+		</div>
+		<p class="blog__themes">Выбрать темы для показа материалов</p>
+		<div class="blog__checkbox">
+			<input id="blogSearch" name="blogSearch" type="radio" class="blog__checkbox-input" v-model="showBlog" value="isShowCategory">
+			<label for="blogSearch" class="blog__checkbox-label">Выбор по категориям</label>
+			<input id="blogSearch2" name="blogSearch" type="radio" class="blog__checkbox-input" v-model="showBlog" value="isShowTags">
+			<label for="blogSearch2" class="blog__checkbox-label">Выбор по тегам</label>
+		</div>
+		<template v-if="showBlog === 'isShowCategory'">
+		<div class="blog__checkbox-list">
+				<input id="blogCategoryAll" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryAll" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">Все</span><span class="blog__checkbox-label-count">47</span></label>
+
+				<input id="blogCategoryAdvices" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryAdvices" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">Советы экспертов</span><span class="blog__checkbox-label-count">47</span></label>
+
+				<input id="blogCategoryGaranty" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryGaranty" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">Гарантии</span><span class="blog__checkbox-label-count">47</span></label>
+
+				<input id="blogCategoryCredit" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryCredit" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">Кредиты</span><span class="blog__checkbox-label-count">47</span></label>
+
+				<input id="blogCategoryLoan" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryLoan" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">Тендерные займы</span><span class="blog__checkbox-label-count">47</span></label>
+
+				<input id="blogCategoryBanks" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryBanks" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">Банки</span><span class="blog__checkbox-label-count">47</span></label>
+
+				<input id="blogCategoryBankGaranty" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryBankGaranty" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">Банковские гарантии</span><span class="blog__checkbox-label-count">47</span></label>
+
+				<input id="blogCategoryGosFact" type="checkbox" name="blogCategory" class="blog__checkbox-input">
+				<label for="blogCategoryGosFact" class="blog__checkbox-label--category"><span class="blog__checkbox-label-wrapper">ГосФакторинг</span> <span class="blog__checkbox-label-count">47</span></label>
+			</div>
+		</template>
+		<template v-else-if="showBlog === 'isShowTags'">
+			<div class="blog__checkbox-list">
+				<input id="blogTagsAll" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsAll" class="blog__checkbox-label--tag">Все</label>
+
+				<input id="blogTagsAdvices" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsAdvices" class="blog__checkbox-label--tag">#Советы экспертов</label>
+
+				<input id="blogTagsGaranty" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsGaranty" class="blog__checkbox-label--tag">#Гарантии</label>
+
+				<input id="blogTagsCredit" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsCredit" class="blog__checkbox-label--tag">#Кредиты</label>
+
+				<input id="blogTagsLoan" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsLoan" class="blog__checkbox-label--tag">#Тендерные займы</label>
+
+				<input id="blogTagsBanks" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsBanks" class="blog__checkbox-label--tag">#Банки</label>
+
+				<input id="blogTagsBankGaranty" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsBankGaranty" class="blog__checkbox-label--tag">#Банковские гарантии</label>
+
+				<input id="blogTagsGosFact" type="checkbox" name="blogTags" class="blog__checkbox-input">
+				<label for="blogTagsGosFact" class="blog__checkbox-label--tag">#ГосФакторинг</label>
+			</div>
+		</template>
+		<div class="blog__content">
+			<ul class="blog__list">
+				<li class="blog__item" v-for="item in blogList" :key="item.blogList">
+					<div class="blog__item-left">
+						<img :src="item.blogPic" alt="Article Blog" class="blog__item-left-pic">
+					</div>
+					<div class="blog__item-right">
+						<div class="blog__item-right-head">
+							<a href="#" class="blog__item-right-head--text padding--style">Советы Экспертов</a>
+							<a href="#" class="blog__item-right-head--text">Банковские гарантии</a>
+						</div>
+						<div class="blog__item-right-main">
+							<p class="blog__item-right-main--text">
+								<a :href="item.blogLink" class="blog__item-right-main--link">{{ item.blogText }}</a>
+							</p>
+						</div>
+						<div class="blog__item-right-footer">
+							<div class="blog__item-right-date">
+								<p class="blog__item-right-date--text"><i class="far fa-calendar-alt blog__item-right-date--icon"></i>12 марта 2020</p>
+								<p class="blog__item-right-date--text"><i class="fas fa-eye blog__item-right-date--icon"></i>108</p>
+							</div>
+							<div class="blog__item-right-time">
+								<p class="blog__item-right-time--text"><i class="far fa-clock blog__item-right-time--icon"></i>Время прочтения: 6 минут</p>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="blog__carousel">
+			<p class="blog__carousel-title">Читайте также</p>
+			<carousel :navigation-enabled="true" :loop="true" :autoplay="true" :autoplay-timeout="5000" :autoplay-hover-pause="true" :per-page-custom="[[1024, 3]]" :per-page="1" navigation-next-label="<i class='fas fa-chevron-right carousel__icon'></i>" navigation-prev-label="<i class='fas fa-chevron-left carousel__icon'></i>">
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			</carousel>
 		</div>
 	</div>
 </section>

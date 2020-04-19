@@ -28,8 +28,8 @@
 			@include xl(font-size, rem(18px));
 		}
 		&-input[type=radio]:checked + label.search__checkbox-label {
-    		color: #195BDD;
-    		border-bottom: 2px solid #195BDD;
+    		color: $mainBlueColor;
+    		border-bottom: 2px solid $mainBlueColor;
 		}
 		&-input[type=radio] {
 			position: absolute;
@@ -106,7 +106,7 @@
 				font-family: $fontRoboto;
 				font-weight: 500;
 				font-size: rem(16px);
-				color: #195BDD;
+				color: $mainBlueColor;
 				@include lg(font-size, rem(18px));	
 				@include xl(font-size, rem(24px));	
 			}
@@ -195,8 +195,8 @@
     bottom: 7px;
     width: 18px;
     height: 9px;
-    border-left: 3px solid #195BDD;
-    border-bottom: 3px solid #195BDD;
+    border-left: 3px solid $mainBlueColor;
+    border-bottom: 3px solid $mainBlueColor;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);

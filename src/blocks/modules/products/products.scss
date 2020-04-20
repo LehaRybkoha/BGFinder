@@ -56,16 +56,22 @@
 		@include md(max-width, 100%);
 	}
 	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 		background-color: #fff;
 		padding: 18px 10px;
 		max-width: 138px;
 		margin: 8px 2px;
+		cursor: pointer;
 		@include md(margin, 6px);
 		@include md(max-width, 210px);
 		@include md(margin, 4px);
 		@include xl(max-width, 238px);
 		box-shadow: 0px 2px 18px rgba(0, 0, 0, 0.1);
-		&:nth-child(3) {
+		&:hover {
+			transition: 0.5s all ease;
 			box-shadow: 0px 6px 35px rgba(0, 0, 0, 0.203012);
 			border: 2px solid #176CE0;
 			z-index: 100;
@@ -136,6 +142,7 @@
 				color: #242F40;
 				font-weight: 500;
 				margin-left: 10px;
+				padding-left: 10px;
 				@include md(font-size, rem(18px));
 				@include xl(font-size, rem(26px));
 			}

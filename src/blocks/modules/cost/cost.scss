@@ -1,0 +1,81 @@
+.cost {
+	background-color: #fff;
+	&__title {
+		font-family: $fontRoboto;
+		font-weight: 500;
+		font-size: rem(12px);
+		text-align: center;
+		color: #47515E;
+		padding: 20px 0;
+	}
+	&__table {
+		margin: 0 auto;
+		border-spacing: 0 10px;
+		&-title {
+			&-text {
+				font-family: $fontRoboto;
+				font-size: rem(14px);
+				color: #212B36;
+				background-color: #ECEDF0;
+				padding: 15px;
+			}
+		}
+		&-section {
+			&-descr {
+				font-family: $fontPoppins;
+				font-size: rem(10px);
+				color: #919EAB;
+			}
+			&-reputation {
+				&-text {
+					font-family: $fontPoppins;
+					font-weight: 300;
+					font-size: rem(12px);
+					color: $mainBlueColor;
+				}
+				&-desc {
+					font-family: $fontPoppins;
+					font-size: rem(10px);
+					color: #919EAB;
+				}
+			}
+			&-akra {
+				&-text {
+					font-family: $fontPoppins;
+					font-size: rem(12px);
+					color: #212B36;
+				}
+				&-desc {
+					font-family: $fontPoppins;
+					font-size: rem(10px);
+					color: #919EAB;
+				}
+			}
+			&-price {
+				font-family: $fontPoppins;
+				font-size: rem(12px);
+				font-weight: 300;
+				color: $mainBlueColor;
+			}
+			&-button {
+				position: relative;
+				height: 30px;
+				& td {
+					padding-bottom: 26px;
+				}
+			}
+		}
+		&-button {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(12px);
+			color: $mainBlueColor;
+			border: 1px solid $mainBlueColor;
+			border-radius: 2px;
+			background-color: #fff;
+			padding: 7px 10px;
+			position: absolute;
+			left: 29%;
+		}
+	}
+}

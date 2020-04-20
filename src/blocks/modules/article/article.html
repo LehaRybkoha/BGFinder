@@ -11,32 +11,224 @@
 		<div class="article__title">
 			<h1 class="article__title-text">Плюсы и минусы банковских гарантий</h1>
 		</div>
-		<div class="article__image">
-			<img src="/img/newsPic1.png" alt="Preview Image" class="article__image-pic">
+		<div class="article-head-wrapper">
+			<div class="article__image">
+				<img src="/img/newsPic1.png" alt="Preview Image" class="article__image-pic">
+			</div>
+			<div class="article__user">
+				<div class="article__user-head">
+					<a href="#" class="article__user-head-link padding-user--style">Советы экспертов</a>
+					<a href="#" class="article__user-head-link">Банковские гарантии</a>
+				</div>
+				<div class="article__user-content">
+					<div class="user-left">
+						<img src="/img/user.jpg" alt="User Avatar" class="user-left__pic">
+					</div>
+					<div class="user-right">
+						<div class="user-right__title">
+							<p class="user-right__title-text">Автор Статьи:</p>
+							<h3 class="user-right__title-author">Владимир Суматохин</h3>
+						</div>
+						<div class="user-right__desc">
+							<p class="user-right__desc-text">Аналитик-эксперт в сфере банковского  обслуживания</p>
+						</div>
+					</div>
+				</div>
+				<div class="article__user-footer">
+					<p class="user-footer__text"><i class="far fa-calendar-alt user-footer__icon"></i>12 марта 2020</p>
+					<p class="user-footer__text"><i class="far fa-clock user-footer__icon"></i>Время прочтения: 6 минут</p>
+				</div>
+			</div>
 		</div>
-		<div class="article__user">
-			<div class="article__user-head">
-				<a href="#" class="article__user-head-link padding-user--style">Советы экспертов</a>
-				<a href="#" class="article__user-head-link">Банковские гарантии</a>
+		<div class="article__advantages">
+			<h3 class="article__advantages-title">Плюсы банковской гарантии заемщика</h3>
+			<ul class="article__advantages-list">
+				<li class="article__advantages-item" v-for="item in articleList" :key="item.articleList">
+					<p class="article__advantages-item-text"><i class="fas fa-check article__advantages-item-icon"></i>{{ item.articleListText }}</p>
+				</li>
+			</ul>
+		</div>
+			<div class="article__table">
+				<h3 class="article__table-title">Виды банковских гарантий</h3>
+				<template v-if="$vssWidth < 768">
+					<table class="article-table">
+						<tr class="article-table__title"><td class="article-table__title-text">Категория 1</td><td class="article-table__title-text">Категория 2</td></tr>
+		  				<tr><td class="article-table__firstGroup">Гарантия платежа</td><td class="article-table__secondGroup">Один из способов обеспечения </td></tr>
+		  				<tr><td class="article-table__firstGroup">Гарантия на-го исполнения </td><td class="article-table__secondGroup">Один из способов обеспечения </td></tr>
+		  				<tr><td class="article-table__firstGroup">Гарантия возврата авансового платежа</td><td class="article-table__secondGroup">Один из способов обеспечения </td></tr>
+		  				<tr><td class="article-table__firstGroup">Тендерная гарантия (гарантия предложения);</td><td class="article-table__secondGroup">Один из способов обеспечения </td></tr>
+		  				<tr><td class="article-table__firstGroup">Гарантия обеспечения кредитной линии;</td><td class="article-table__secondGroup">Один из способов обеспечения </td></tr>
+		  				<tr><td class="article-table__firstGroup">Банковская таможенная гарантия;</td><td class="article-table__secondGroup">Один из способов обеспечения </td></tr>
+		  				<tr><td class="article-table__firstGroup">Банковская таможенная гарантия;</td><td class="article-table__secondGroup">Один из способов обеспечения </td></tr>
+					</table>
+				</template>
+				<template v-else>
+					<table class="article-table">
+						<tr class="article-table__title">
+							<td class="article-table__title-text">Категория 1</td>
+							<td class="article-table__title-text">Категория 2</td>
+							<td class="article-table__title-text">Категория 3</td>
+							<td class="article-table__title-text">Категория 4</td>
+						</tr>
+		  				<tr>
+		  					<td class="article-table__firstGroup">Гарантия платежа</td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  				</tr>
+		  				<tr>
+		  					<td class="article-table__firstGroup">Гарантия на-го исполнения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  				</tr>
+		  				<tr>
+		  					<td class="article-table__firstGroup">Гарантия возврата авансового платежа</td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  				</tr>
+		  				<tr>
+		  					<td class="article-table__firstGroup">Тендерная гарантия (гарантия предложения);</td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  				</tr>
+		  				<tr>
+		  					<td class="article-table__firstGroup">Гарантия обеспечения кредитной линии;</td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  				</tr>
+		  				<tr>
+		  					<td class="article-table__firstGroup">Банковская таможенная гарантия;</td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  				</tr>
+		  				<tr>
+		  					<td class="article-table__firstGroup">Банковская таможенная гарантия;</td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  					<td class="article-table__secondGroup">Один из способов обеспечения </td>
+		  				</tr>
+					</table>
+				</template>
 			</div>
-			<div class="article__user-content">
-				<div class="user-left">
-					<img src="/img/user.jpg" alt="User Avatar" class="user-left__pic">
-				</div>
-				<div class="user-right">
-					<div class="user-right__title">
-						<p class="user-right__title-text">Автор Статьи:</p>
-						<h3 class="user-right__title-author">Владимир Суматохин</h3>
-					</div>
-					<div class="user-right__desc">
-						<p class="user-right__desc-text">Аналитик-эксперт в сфере банковского  обслуживания</p>
-					</div>
-				</div>
+			<div class="article__quote">
+				<h3 class="article__quote-title">Цитата:</h3>
+				<p class="article__quote-text">“ В связи с активной востребованностью банковской гарантии, значительно увеличилось число предложений на финансовом рынке.“</p>
 			</div>
-			<div class="article__user-footer">
-				<p class="user-footer__text"><i class="far fa-calendar-alt user-footer__icon"></i>12 марта 2020</p>
-				<p class="user-footer__text"><i class="far fa-clock user-footer__icon"></i>Время прочтения: 6 минут</p>
+			<div class="article__sociate">
+				<h3 class="article__sociate-title">Поделитесь статьей в соц.сетях</h3>
+				<ul class="article__sociate-list">
+					<li class="article__sociate-item">
+						<a href="#" class="article__sociate-text"><i class="fab fa-facebook-f article__sociate-icon"></i>FACEBOOK</a>
+					</li>
+					<li class="article__sociate-item">
+						<a href="#" class="article__sociate-text"><i class="fab fa-twitter article__sociate-icon"></i>TWITTER</a>
+					</li>
+					<li class="article__sociate-item">
+						<a href="#" class="article__sociate-text"><i class="fab fa-telegram-plane article__sociate-icon"></i>TELEGRAM</a>
+					</li>
+					<li class="article__sociate-item">
+						<a href="#" class="article__sociate-text"><i class="fab fa-instagram article__sociate-icon"></i>INSTAGRAM</a>
+					</li>
+					<li class="article__sociate-item">
+						<a href="#" class="article__sociate-text"><i class="fab fa-whatsapp article__sociate-icon"></i>WHATSAPP</a>
+					</li>
+					<li class="article__sociate-item">
+						<a href="#" class="article__sociate-text"><i class="fab fa-vk article__sociate-icon"></i>VK</a>
+					</li>
+				</ul>
 			</div>
+		<div style="text-align: center; margin-bottom: 50px;" class="article__comments">
+			{ БЛОК С КОММЕНТАРИЯМИ }
+		</div>
+		<div class="blog__carousel">
+			<p class="blog__carousel-title">Читайте также</p>
+			<carousel :navigation-enabled="true" :loop="true" :autoplay="true" :autoplay-timeout="5000" :autoplay-hover-pause="true" :per-page-custom="[[1024, 3]]" :per-page="1" navigation-next-label="<i class='fas fa-chevron-right carousel__icon'></i>" navigation-prev-label="<i class='fas fa-chevron-left carousel__icon'></i>">
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			  <slide>
+			   	<div class="slide-wrapper">
+			   		<div class="slide__head">
+				   		<img src="/img/newsPic1.png" alt="Article Image" class="slide__head-pic">
+			   		</div>
+			   		<div class="slide__content">
+				   		<a class="slide__content-text padding-slide--style">Советы экспертов</a>
+				   		<a class="slide__content-text">Банковские гарантии</a>
+				   		<p class="slide__content-desc">Плюсы и минусы банковских гарантий</p>
+			   		</div>
+			   		<div class="slide__footer">
+				   		<span class="slide__footer-text">12 Марта 2020</span>
+				   		<button class="slide__button">Читать</button>
+			   		</div>
+			   	</div>
+			  </slide>
+			</carousel>
 		</div>
 	</div>
 </article>

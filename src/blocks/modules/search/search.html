@@ -1,0 +1,70 @@
+<div class="website-nav">
+	<div class="container">
+		<p class="website-nav__text">
+			<a href="/index.html" class="website-nav__link">Главная / </a>
+			<a href="/search.html" class="website-nav__link">Практика ФАС РФ</a>
+		</p>
+	</div>
+</div>
+<section class="search">
+	<div class="container search-wrapper">
+		<div class="search__title">
+			<h1 class="search__title-text">Практика ФАС</h1>
+		</div>
+		<div class="search__checkbox">
+			<input id="fasSearch" name="fasSearch" type="radio" class="search__checkbox-input" v-model="showFas" value="isShowSearch">
+			<label for="fasSearch" class="search__checkbox-label">Поиск решений</label>
+			<input id="fasSearch2" name="fasSearch" type="radio" class="search__checkbox-input" v-model="showFas" value="isShowData">
+			<label for="fasSearch2" class="search__checkbox-label">Реестр решений</label>
+		</div>
+		<template v-if="showFas === 'isShowSearch'">
+			<div class="search__content">
+				<h2 class="search__content-title">Поиск решений УФАС</h2>
+				<input type="text" placeholder="Введите строку для поиска. Например: Избыточные требова..." class="search__content-input">
+				<div class="search__content-checkblock">
+					<input id="inputSearch" type="checkbox" class="search__content-checkbox">
+					<label for="inputSearch" class="search__content-checkbox-label">Точное совпадение</label>
+				</div>
+				<input type="text" placeholder="Если необходимо выберите нужное (ые) УФАС" class="search__content-input">
+				<button type="button" class="search__content-button">Поиск решений</button>
+			</div>
+		</template>
+		<template v-else-if="showFas === 'isShowData'">
+			<div class="search__content">
+				<h2 class="search__content-title">Реестр решений УФАС</h2>
+				<input type="text" placeholder="Введите строку для поиска. Например: Избыточные требова..." class="search__content-input">
+				<input type="text" placeholder="Если необходимо выберите нужное (ые) УФАС" class="search__content-input">
+				<input type="text" placeholder="Если необходимо выберите нужное (ые) УФАС" class="search__content-input">
+				<input type="text" placeholder="Если необходимо выберите нужное (ые) УФАС" class="search__content-input">
+				<button type="button" class="search__content-button">Поиск решений</button>
+			</div>
+			<ul class="search__list">
+				<li class="search__item">
+					<div class="search__item-title">
+						<h2 class="search__item-title-text"><a href="#" class="search__item-title-link">Ростовская УФАС</a></h2>
+						<span class="search__item-title-date">13.12.2020</span>
+					</div>
+					<p class="search__item-status">Необоснованна</p>
+					<div class="search__item-content">
+						<div class="search__item-content-applicant">
+							<span class="search__item-content-applicant-text">Заявитель:</span>
+							<p class="search__item-content-applicant-info">Общество с ограниченной ответственностью “Контракт”</p>
+						</div>
+						<div class="search__item-content-customer">
+							<span class="search__item-content-customer-text">Заказчик: </span>
+							<p class="search__item-content-customer-info">Государственное, бюджетное,  муниципальное учреждениям здравоохранения “Родильный дом №5 города Ростов на дону”</p>
+						</div>
+						<div class="search__item-content-purchase">
+							<span class="search__item-content-purchase-text">Закупка: </span>
+							<p class="search__item-content-purchase-info">16347539576927472647</p>
+						</div>
+						<div class="search__item-content-report">
+							<span class="search__item-content-report-text">Жалоба: </span>
+							<p class="search__item-content-report-info">6346574369659367548375834</p>
+						</div>
+					</div>
+				</li>
+			</div>
+		</template>
+	</div>
+</section>

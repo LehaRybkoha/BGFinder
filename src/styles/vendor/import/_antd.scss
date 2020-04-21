@@ -1,0 +1,444 @@
+/* component style */
+.vue-slider-disabled .vue-slider-process {
+  background-color: #a7a7a7;
+}
+.vue-slider-disabled .vue-slider-dot-handle {
+  border-color: #a7a7a7;
+}
+.vue-slider-disabled .vue-slider-mark-step-active {
+  box-shadow: 0 0 0 2px #a7a7a7;
+}
+
+/* rail style */
+.vue-slider-rail {
+  background-color: whitesmoke;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+.vue-slider:hover .vue-slider-rail {
+  background-color: #e1e1e1;
+}
+
+/* process style */
+.vue-slider-process {
+  background-color: #9cd5ff;
+  border-radius: 15px;
+  transition: background-color 0.3s;
+}
+.vue-slider:hover .vue-slider-process {
+  background-color: #69c0ff;
+}
+
+/* mark style */
+.vue-slider-mark-step {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #e8e8e8;
+  background-color: #fff;
+}
+.vue-slider-mark-step-active {
+  box-shadow: 0 0 0 2px #9cd5ff;
+}
+.vue-slider:hover .vue-slider-mark-step-active {
+  box-shadow: 0 0 0 2px #69c0ff;
+}
+
+.vue-slider-mark-label {
+  font-size: 12px;
+  white-space: nowrap;
+}
+/* dot style */
+.vue-slider-dot-handle {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #9cd5ff;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.vue-slider:hover .vue-slider-dot-handle {
+  border-color: #69c0ff;
+}
+
+.vue-slider-dot-handle-focus {
+  border-color: #36abff;
+  box-shadow: 0 0 0 5px rgba(54, 171, 255, 0.2);
+}
+.vue-slider:hover .vue-slider-dot-handle-focus {
+  border-color: #36abff;
+}
+
+.vue-slider-dot-handle:hover {
+  border-color: #36abff;
+}
+.vue-slider:hover .vue-slider-dot-handle:hover {
+  border-color: #36abff;
+}
+
+.vue-slider-dot-handle-disabled {
+  cursor: not-allowed;
+  border-color: #ddd !important;
+}
+
+.vue-slider-dot-tooltip {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+.vue-slider-dot-tooltip-inner {
+  font-size: 14px;
+  white-space: nowrap;
+  padding: 6px 8px;
+  color: #fff;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+.vue-slider-dot-tooltip-inner::after {
+  content: "";
+  position: absolute;
+}
+.vue-slider-dot-tooltip-inner-top::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-top-color: inherit;
+}
+.vue-slider-dot-tooltip-inner-bottom::after {
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-bottom-color: inherit;
+}
+.vue-slider-dot-tooltip-inner-left::after {
+  left: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-left-color: inherit;
+}
+.vue-slider-dot-tooltip-inner-right::after {
+  right: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 0;
+  width: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  border-right-color: inherit;
+}
+.vue-slider-dot-tooltip-inner-top {
+  transform-origin: 50% 100%;
+}
+.vue-slider-dot-tooltip-inner-bottom {
+  transform-origin: 50% 0;
+}
+.vue-slider-dot-tooltip-inner-left {
+  transform-origin: 100% 50%;
+}
+.vue-slider-dot-tooltip-inner-right {
+  transform-origin: 0% 50%;
+}
+
+.vue-slider-dot:hover .vue-slider-dot-tooltip, .vue-slider-dot-tooltip-show {
+  opacity: 1;
+  visibility: visible;
+}
+.vue-slider-dot:hover .vue-slider-dot-tooltip .vue-slider-dot-tooltip-inner, .vue-slider-dot-tooltip-show .vue-slider-dot-tooltip-inner {
+  transform: scale(1);
+}
+
+.asd__fade-enter-active,
+.asd__fade-leave-active {
+  transition: all 0.2s ease; }
+
+.asd__fade-enter,
+.asd__fade-leave-active {
+  opacity: 0; }
+
+.asd__list-complete-enter,
+.asd__list-complete-leave-to {
+  opacity: 0;
+  transform: translateY(30px); }
+
+.asd__list-complete-leave-active {
+  position: absolute;
+  visibility: hidden; }
+
+.datepicker-trigger {
+  position: relative;
+  overflow: visible; }
+
+.asd__wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  text-align: center;
+  overflow: hidden;
+  background-color: white; }
+  .asd__wrapper *,
+  .asd__wrapper *:after,
+  .asd__wrapper *:before {
+    box-sizing: border-box; }
+  .asd__wrapper--full-screen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: none;
+    z-index: 100; }
+
+.asd__inner-wrapper {
+  transition: all 0.3s ease;
+  position: relative; }
+
+.asd__datepicker-header {
+  position: relative; }
+
+.asd__keyboard-shortcuts-trigger-wrapper {
+  position: relative; }
+
+.asd__keyboard-shortcuts-trigger {
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font: inherit;
+  border-width: 26px 33px 0px 0px;
+  border-top: 26px solid transparent;
+  border-right: 33px solid #00a699; }
+  .asd__keyboard-shortcuts-trigger span {
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    right: -28px; }
+
+.asd__keyboard-shortcuts-show {
+  display: block !important; }
+
+.asd__keyboard-shortcuts-close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  padding: 5px;
+  z-index: 100;
+  cursor: pointer; }
+
+.asd__keyboard-shortcuts-menu {
+  display: none;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 10;
+  overflow: auto;
+  background: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dbdbdb;
+  border-image: initial;
+  border-radius: 2px;
+  padding: 22px;
+  margin: 33px;
+  text-align: left; }
+
+.asd__keyboard-shortcuts-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0px; }
+
+.asd__keyboard-shortcuts-list {
+  list-style: none;
+  margin: 6px 0px;
+  padding: 0px;
+  white-space: initial; }
+
+.asd__keyboard-shortcuts-symbol {
+  font-family: monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #f2f2f2;
+  padding: 2px 6px;
+  margin-right: 4px; }
+
+.asd__change-month-button {
+  position: absolute;
+  top: 12px;
+  z-index: 10;
+  background: white; }
+  .asd__change-month-button--previous {
+    left: 0;
+    padding-left: 15px; }
+  .asd__change-month-button--next {
+    right: 0;
+    padding-right: 15px; }
+  .asd__change-month-button > button {
+    background-color: white;
+    border: 1px solid #e4e7e7;
+    border-radius: 3px;
+    padding: 4px 8px;
+    cursor: pointer; }
+    .asd__change-month-button > button:hover {
+      border: 1px solid #c4c4c4; }
+    .asd__change-month-button > button > svg {
+      height: 19px;
+      width: 19px;
+      fill: #82888a; }
+
+.asd__days-legend {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  padding: 0 10px; }
+
+.asd__day-title {
+  display: inline-block;
+  width: 14.28571%;
+  text-align: center;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 0.8em;
+  margin-left: -1px; }
+
+.asd__month-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: white;
+  width: 100%;
+  max-width: 100%; }
+
+.asd__month {
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 15px; }
+  .asd__month--hidden {
+    height: 275px;
+    visibility: hidden; }
+
+.asd__month-name {
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0 0 30px;
+  line-height: 1.4em;
+  font-weight: bold; }
+
+.asd__month-year-select {
+  -webkit-appearance: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  color: blue;
+  font-size: inherit;
+  font-weight: inherit;
+  padding: 0; }
+  .asd__month-year-select::-ms-expand {
+    display: none; }
+
+.asd__day {
+  line-height: 38px;
+  height: 38px;
+  padding: 0;
+  overflow: hidden; }
+  .asd__day--enabled {
+    border: 1px solid #e4e7e7; }
+    .asd__day--enabled:hover {
+      background-color: #e4e7e7; }
+    .asd__day--enabled:focus {
+      outline: auto 5px Highlight;
+      outline: auto 5px -webkit-focus-ring-color; }
+  .asd__day--disabled, .asd__day--empty {
+    opacity: 0.5; }
+    .asd__day--disabled button, .asd__day--empty button {
+      cursor: default; }
+  .asd__day--empty {
+    border: none; }
+  .asd__day--disabled:hover {
+    background-color: transparent; }
+
+.asd__day-button {
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  text-align: center;
+  user-select: none;
+  font-size: 15px;
+  font-weight: inherit;
+  padding: 0; }
+
+.asd__action-buttons {
+  min-height: 50px;
+  padding-top: 10px;
+  margin-bottom: 12px; }
+  .asd__action-buttons button {
+    display: block;
+    position: relative;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer; }
+    .asd__action-buttons button:hover {
+      text-decoration: underline; }
+    .asd__action-buttons button:nth-child(1) {
+      float: left;
+      left: 15px; }
+    .asd__action-buttons button:nth-child(2) {
+      float: right;
+      right: 15px; }
+
+.asd__mobile-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 15px 15px 15px 15px !important;
+  text-align: center;
+  height: 50px; }
+  .asd__mobile-header h3 {
+    font-size: 20px;
+    margin: 0; }
+
+.asd__mobile-only {
+  display: none; }
+  @media (max-width: 600px) {
+    .asd__mobile-only {
+      display: block; } }
+
+.asd__mobile-close {
+  border: none;
+  position: absolute;
+  top: 7px;
+  right: 5px;
+  padding: 5px;
+  z-index: 100;
+  cursor: pointer; }
+  .asd__mobile-close__icon {
+    position: relative;
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 0; }

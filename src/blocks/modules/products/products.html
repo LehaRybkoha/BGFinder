@@ -1,0 +1,32 @@
+<section class="products">
+	<div class="container products-wrapper">
+		<div class="products__title"><h2 class="products__title-text">Финансовые продукты</h2><hr class="products-line"></div>
+		<ul class="products__list">
+			<li class="products__item" v-for="item in productsList" :key="item.productsList">
+				<a href="#calc" class="products-link">
+					<h4 class="products__item-title">{{ item.productsTitle }}</h4>
+					<ul class="products-item__list">
+						<a href="#calc" class="products-item__item">
+							<i class="far fa-check-circle products-icon"></i>
+							<p class="products-item__item-text"> {{ item.productsItemListText1 }}</p>
+						</a>
+						<a href="#calc" class="products-item__item">
+							<i class="far fa-check-circle products-icon"></i>
+							<p class="products-item__item-text"> {{ item.productsItemListText2 }}</p>
+						</a>
+						<a href="#calc" class="products-item__item">
+							<i class="far fa-check-circle products-icon"></i>
+							<p class="products-item__item-text"> {{ item.productsItemListText3 }}</p>
+						</a>
+					</ul>
+					<div class="products__item-desc">
+						<span class="products__item-desc--max products__item-desc--text">Макс. сумма </span>
+						<span class="products__item-desc--price products__item-desc--text">{{ item.productsPrice }}</span>
+						<span class="products__item-desc--ruble products__item-desc--text">МЛН.РУБ</span>
+					</div>
+					<a href="#calc" class="products__item-button">Подать заявку</a>
+				</a>
+			</li>
+		</ul>
+	</div>
+</section>

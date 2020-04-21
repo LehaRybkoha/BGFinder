@@ -1,0 +1,292 @@
+.calc {
+	padding: 15px 0 20px 0;
+	@include lg(padding, 15px 0 65px 0);
+	&::before {
+		content: "";
+		background-image:url(/img/calcBg.jpg);
+		background-size: cover;
+		position: absolute;
+		width: 105%;
+		right: 0;
+		@include sm(width, 50%);
+		height: 100%;
+		z-index: -1;
+	}
+	&-wrapper {
+		padding: 0;
+		max-width: 100%!important;
+		position: relative;
+		@include lg(max-width, 1100px!important);
+		@include xl(max-width, 1440px!important);
+	}
+	&-line {
+		margin: 5px auto 15px auto;
+		max-width: 178px;
+		border: 1px solid #C4CDD5;
+		@include sm(display, none);
+	}
+	&__title {
+		padding-top: 20px;
+		z-index: 100;
+		&-wrapper {
+			display: flex;
+			justify-content: space-between;
+		}
+		&-price {
+			font-family: $fontRoboto;
+			text-align: right;
+			display: none;
+			font-weight: 500;
+			font-size: rem(14px);
+			line-height: 25px;
+			color: #fff;
+			position: absolute;
+			top: 200px;
+			right: 30px;
+			@include sm(display, inline);
+			@include sm(font-size, rem(24px));
+			@include sm(line-height, 50px);
+			@include md(top, 250px);
+			@include md(right, 60px);
+			@include lg(font-size, rem(35px));
+			@include xl(top, 480px);
+			@include xl(right, 80px);
+			@include xl(font-size, rem(48px));
+			@include xl(line-height, 70px);
+		}
+		&-text {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(14px);
+			text-align: center;
+			color: #fff;
+			@include sm(margin-right, 15px);
+			@include md(margin-right, 40px);
+			@include sm(max-width, 320px);
+			@include sm(text-align, right);
+			@include sm(font-size, rem(22px));
+			@include sm(line-height, 35px);
+			@include md(font-size, rem(24px));
+			@include lg(line-height, 50px);
+			@include lg(max-width, 500px);
+			@include lg(font-size, rem(36px));
+			@include xl(font-size, rem(60px));
+			@include xl(max-width, 600px);
+			@include xl(line-height, 65px);
+			@include xl(margin-top, 65px);
+			&-wrapper {
+				margin: 0 auto;
+				@include sm(margin, 0);
+			}
+			@media screen and (min-width: 425px) {
+				font-size: rem(16px);
+				min-height: 30px;
+			}
+		}
+		&-desc {
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			text-align: center;
+			margin: 0 auto 10px auto;
+			color: #fff;
+			max-width: 90%;
+			@include sm(color, #212B36);
+			@include sm(margin, 0 0 20px 35px);
+			@include sm(text-align, left);
+			@include sm(line-height, 22px);
+			@include sm(font-size, rem(14px));
+			@include lg(max-width, 440px);
+			@include xl(margin, 0 0 28px 35px);
+			@include xl(font-size, 28px);
+			@include sm(line-height, 30px);
+			@include sm(line-height, 33px);
+			@media screen and (min-width: 425px) {
+				font-size: rem(12px);
+				min-height: 30px;
+				max-width: 300px;
+			}
+		}
+	}
+	&__desc {
+		margin: 20px 0 25px 0;
+		display: flex;
+		justify-content: space-around;
+		@include sm(display, none);
+		&-title {
+			font-family: $fontRoboto;
+			font-size: rem(14px);
+			line-height: 25px;
+			font-weight: 500;
+			color: #47515E;
+			max-width: 200px;
+			@include sm(display, none);
+			@include sm(font-size, rem(20px));
+			@include sm(max-width, 280px);
+			@include sm(line-height, 35px);
+			@include sm(margin-bottom, 20px);
+			@include md(font-size, rem(24px));
+			@include lg(font-size, rem(36px));
+			@include lg(max-width, 400px);
+			@include lg(line-height, 50px);
+			@include xl(font-size, rem(46px));
+			@include xl(max-width, 500px);
+			@include xl(margin, 65px 0 65px 35px);
+			&--sm {
+				display: none;
+				margin-left: 35px;
+				@include sm(display, flex);
+				@include sm(justify-content, space-around);
+			}
+			@media screen and (min-width: 425px) {
+				font-size: rem(16px);
+				min-height: 30px;
+			}
+		}
+		&-price {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(14px);
+			line-height: 25px;
+			color: #fff;
+			max-width: 80px;
+			@include sm(margin-right, 0);
+			@media screen and (min-width: 425px) {
+				font-size: rem(16px);
+				min-height: 30px;
+				margin-right: 60px;
+			}
+		}
+	}
+}
+
+.calculator {
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #AAB6C2;
+	border-radius: 2px;
+	max-width: 290px;
+	@include xl(max-width, 670px);
+	@include lg(padding, 50px);
+	@include lg(max-width, 550px);
+	@include sm(margin, 0 0 0 35px);
+	margin: 0 auto;
+	@media screen and (min-width: 425px) {
+		max-width: 330px;
+	}
+	@media screen and (min-width: 670px) {
+		max-width: 360px;
+	}
+	&__select {
+		min-width: 100%;
+		min-height: 25px;
+		background-color: #fff;
+		border: 1px solid #D4DEE7;
+		border-radius: 2px;
+		padding-left: 7px;
+		margin-bottom: 18px;
+		font-family: $fontRoboto;
+		font-weight: 400;
+		font-size: rem(8px);
+		color: #5E6875;
+		@include md(font-size, rem(13px))
+		@include xl(font-size, rem(16px));
+		@include md(min-height, 35px);
+		@include lg(min-height, 40px);
+		@include xl(min-height, 45px);
+		@media screen and (min-width: 425px) {
+			font-size: rem(11px);
+			min-height: 30px;
+		}
+	}
+	&__title {
+		font-family: $fontRoboto;
+		font-weight: 500;
+		font-size: rem(10px);
+		color: #5E6875;
+		margin-bottom: 10px;
+		@include md(font-size, rem(16px))
+		@include xl(font-size, rem(18px));
+		@media screen and (min-width: 425px) {
+			font-size: rem(12px);
+		}
+	}
+	&__optgroup {
+		font-family: $fontRoboto;
+		font-weight: bold;
+		font-size: rem(17px);
+		@include xl(font-size, 23px);
+		color: #2C2C2C;
+	}
+	&__option {
+		font-family: $fontRoboto;
+		font-weight: bold;
+		font-size: rem(15px);
+		color: #5E6875;
+		padding: 20px 0;
+		@include xl(font-size, 20px);
+	}
+	&__range {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 20px;
+		&-slider {
+			min-width: 167px;
+			@include sm(min-width, 180px);
+			@include md(min-width, 220px);
+			@include lg(min-width, 320px);
+			@include xl(min-width, 370px);
+			@media screen and (min-width: 425px) {
+				min-width: 200px;
+			}
+		}
+		&-text {
+			max-width: 69px;
+			min-height: 25px;
+			font-family: $fontRoboto;
+			font-size: rem(12px);
+			color: #212B36;
+			border: 1px solid #D4DEE7;
+			border-radius: 2px;
+			text-align: center;
+			@include lg(min-height, 40px);
+			@include lg(font-size, 20px);
+			@include lg(max-width, 111px);
+			@include xl(min-height, 45px);
+			@include xl(font-size, rem(20px));
+			@media screen and (min-width: 425px) {
+				min-height: 30px;
+				max-width: 75px;
+			}
+		}
+	}
+	&__date {
+		display: flex;
+		justify-content: space-between;
+		&-input {
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			color: #5E6875;
+			min-height: 25px;
+			min-width: 138px;
+			border: 1px solid #D4DEE7;
+			border-radius: 2px;
+			padding-left: 10px;
+			@include lg(min-width, 190px);
+			@include lg(min-height, 40px);
+			@include xl(min-width, 260px);
+			@include xl(font-size, rem(16px));
+			@media screen and (min-width: 425px) {
+				font-size: rem(12px);
+				min-height: 30px;
+			}
+		}
+		&-button {
+			@include buttonStyles;
+			margin-left: 12px;
+			padding: 9px 16px;
+			@include lg(padding, 11px 60px);
+			@include xl(padding, 11px 100px);
+		}
+	}
+}

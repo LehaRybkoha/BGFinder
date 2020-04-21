@@ -4,6 +4,7 @@
 	padding: 15px;
 	margin-top: 15px;
 	width: 100%;
+	@include md(margin-top, 0);
 	&-wrapper {
 		padding: 0;
 	}
@@ -69,6 +70,7 @@
 		justify-content: center;
 		margin: 0 auto;
 		margin-bottom: 18px;
+		@include sm(display, inline-block);
 		@include md(margin, 0 0 75px 0);
 		@include md(padding, 10px 40px);
 		@include lg(padding, 13px 40px);

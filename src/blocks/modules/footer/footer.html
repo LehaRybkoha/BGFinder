@@ -28,25 +28,30 @@
 		</div>
 		</div>
 		<div class="footer-bottom">
-			<div class="footer-bottom__list-wrapper">
-				<ul class="footer-bottom__list">
-					<p class="footer-bottom__list-title">Финансовые продукты</p>
-					<li class="footer-bottom__item" v-for="item in footerListTwo" :key="item.footerListOne">
-						<a href="#" class="footer-bottom__item-link">{{ item.footerLink }}</a>
-					</li>
-				</ul>
-				<ul class="footer-bottom__list">
-					<p class="footer-bottom__list-title">Банковские Гарантии по 44-ФЗ</p>
-					<li class="footer-bottom__item" v-for="item in footerListTwo" :key="item.footerListTwo">
-						<a href="#" class="footer-bottom__item-link">{{ item.footerLink }}</a>
-					</li>
-				</ul>
+			<div class="footer-bottom-wrapper">
+				<div class="footer-bottom__list-wrapper">
+					<ul class="footer-bottom__list">
+						<p class="footer-bottom__list-title">Финансовые продукты</p>
+						<li class="footer-bottom__item" v-for="item in footerListTwo" :key="item.footerListOne">
+							<a href="#" class="footer-bottom__item-link">{{ item.footerLink }}</a>
+						</li>
+					</ul>
+					<ul class="footer-bottom__list">
+						<p class="footer-bottom__list-title">Банковские Гарантии по 44-ФЗ</p>
+						<li class="footer-bottom__item" v-for="item in footerListTwo" :key="item.footerListTwo">
+							<a href="#" class="footer-bottom__item-link">{{ item.footerLink }}</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-bottom__icons">
+					<a href="#" class="footer-bottom__link"><i class="fab fa-vk footer-bottom__icons-icon"></i></a>
+					<a href="#" class="footer-bottom__link"><i class="fab fa-instagram footer-bottom__icons-icon"></i></a>
+					<a href="#" class="footer-bottom__link"><i class="fab fa-whatsapp footer-bottom__icons-icon"></i></a>
+					<a href="#" class="footer-bottom__link"><i class="fab fa-viber footer-bottom__icons-icon"></i></a>
+					<a href="#" class="footer-bottom__link"><i class="fab fa-telegram-plane footer-bottom__icons-icon"></i></a>
+				</div>
 			</div>
-			<div class="footer-bottom__icons">
-				<i class="fab fa-facebook-f footer-bottom__icons-icon"></i>
-				<i class="fab fa-twitter footer-bottom__icons-icon"></i>
-				<i class="fab fa-telegram-plane footer-bottom__icons-icon"></i>
-			</div>
+			<p class="footer-bottom__author">ИП Гираев М.Г ИНН 053003441466 ОГРНИП 320057100024524</p>
 		</div>
 	</div>
 </footer>

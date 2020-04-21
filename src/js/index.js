@@ -2,13 +2,41 @@ import Vue from 'vue';
 import VueScreenSize from 'vue-screen-size';
 import VueSlider from 'vue-slider-component';
 import VueCarousel from 'vue-carousel';
+import VueScrollTo from 'vue-scrollto';
 import { format, formatDistance, formatRelative, subDays } from './import/date_fns';
 import AirbnbStyleDatepicker from './import/vue-airbnb-style-datepicker';
 import "./import/modules.js";
-var datepickerOptions = {}
+var datepickerOptions = {
+  days: ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+  daysShort: ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'],
+  monthNames: [
+    'Январь',
+    'Февраль',
+    'Март',
+    'Апрель',
+    'Май',
+    'Июнь',
+    'Июль',
+    'Август',
+    'Сентябрь',
+    'Октябрь',
+    'Ноябрь',
+    'Декабрь',
+  ],
+  colors: {
+    selected: '#7FBCE3',
+    inRange: '#176CE0',
+    selectedText: '#fff',
+    text: '#000',
+    inRangeBorder: '#176CE0',
+    disabled: '#fff',
+    hoveredInRange: '#176CE0'
+  },
+}
 Vue.use(AirbnbStyleDatepicker, datepickerOptions)
 Vue.use(VueScreenSize);
 Vue.use(VueCarousel);
+Vue.use(VueScrollTo)
 
 let app = new Vue({
   el: '#wrapper',
@@ -27,15 +55,15 @@ let app = new Vue({
     navList: [
       { 
         navOption: 'Финансовые продукты',
-        navLinks: '/financeProducts.html'
+        navLinks: '/index.html#calc'
       },
       { 
         navOption: 'Практика ФАС РФ',
-        navLinks: '/FAS.html'
+        navLinks: '/search.html'
       },
       { 
         navOption: 'Блог',
-        navLinks: '/Blog.html'
+        navLinks: '/blog.html'
       }
     ],
     stepsList: [
@@ -171,17 +199,17 @@ let app = new Vue({
       { 
         blogPic: '/img/newsPic1.png',
         blogText: 'Плюсы и минусы банковских гарантий',
-        blogLink: '/index.html'
+        blogLink: '/article.html'
       },
       { 
         blogPic: '/img/newsPic2.png',
         blogText: 'Банковская гарантия: ее риски при использовании в тендерах',
-        blogLink: '/search.html'
+        blogLink: '/article.html'
       },
       { 
         blogPic: '/img/newsPic3.png',
         blogText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus porro distinctio, similique repellendus aperiam tempora iusto possimus sint, quas excepturi ratione. Eos ratione nostrum, sit corporis dignissimos voluptatem debitis obcaecati!',
-        blogLink: '/blog.html'
+        blogLink: '/article.html'
       },
     ],
     articleList: [
@@ -219,6 +247,7 @@ let app = new Vue({
       }
       return formattedDates
     },
+    
   },
 });
 

@@ -17,6 +17,9 @@
 			@include xl(font-size, rem(60px));
 		}
 	}
+	&-link {
+		display: block;
+	}
 	&-line {
 		border: 1px solid #C4CDD5;
 		max-width: 153px;
@@ -53,7 +56,8 @@
 		justify-content: center;
 		max-width: 420px;
 		margin: 0 auto;
-		@include md(max-width, 100%);
+		@include md(max-width, 95%);
+		@include lg(max-width, 100%);
 	}
 	&__item {
 		display: flex;

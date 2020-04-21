@@ -127,11 +127,25 @@
 		}
 	}
 	&-bottom {
-		padding: 90px 25px 25px 25px;
 		background-color: #2A5082;
-		@include md(display, flex);
-		@include md(justify-content, space-around);
-		@include md(padding, 25px);
+		&-wrapper {
+			@include xl(max-width, 1100px);
+			@include md(display, flex);
+			@include md(justify-content, space-around);
+			@include md(padding, 25px);
+			padding: 90px 25px 25px 25px;
+			margin: 0 auto;
+		}
+		&__author {
+			font-family: $fontRoboto;
+			font-size: rem(8px);
+			color: #fff;
+			text-align: center;
+			padding-bottom: 20px;
+			text-transform: uppercase;
+			@include lg(font-size, rem(12px));
+			@include xl(font-size, rem(16px));
+		}
 		&__icons {
 			margin-top: 40px;
 			display: flex;

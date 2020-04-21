@@ -1,113 +1,214 @@
 <section class="cost">
-	<div class="container">
+	<div class="container cost-wrapper">
 		<h2 class="cost__title">Ориентировочная стоимость финансовых продуктов</h2>
-		<table class="cost__table">
-			<tr class="cost__table-title">
-				<td class="cost__table-title-text">Банк</td>
-				<td class="cost__table-title-text">Рейтинг</td>
-				<td class="cost__table-title-text">АКРА</td>
-				<td class="cost__table-title-text">Стоимость</td>
-			</tr>
-			<tr class="cost__table-section">
-				<td class="cost__table-section-image">
-					<img class="cost__table-section-image-pic" src="/img/bankZenit.png" alt="Zenit">
-					<p class="cost__table-section-descr">БАНК Зенит</p>
-				</td>
-				<td class="cost__table-section-reputation">
-					<span class="cost__table-section-reputation-text">4,6</span>
-					<p class="cost__table-section-reputation-desc">4,6 из 5</p>
-				</td>
-				<td class="cost__table-section-akra">
-					<p class="cost__table-section-akra-text">B B B +</p>
-					<p class="cost__table-section-akra-desc">Стабильный</p>
-				</td>
-				<td class="cost__table-section-price">22 680 руб</td>
-			</tr>
-			<tr class="cost__table-section-button">
-				<td>
-					<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
-				</td>
-			</tr>
-			<tr class="cost__table-section">
-				<td class="cost__table-section-image">
-					<img class="cost__table-section-image-pic" src="/img/bankZenit.png" alt="Zenit">
-					<p class="cost__table-section-descr">БАНК Зенит</p>
-				</td>
-				<td class="cost__table-section-reputation">
-					<span class="cost__table-section-reputation-text">4,6</span>
-					<p class="cost__table-section-reputation-desc">4,6 из 5</p>
-				</td>
-				<td class="cost__table-section-akra">
-					<p class="cost__table-section-akra-text">B B B +</p>
-					<p class="cost__table-section-akra-desc">Стабильный</p>
-				</td>
-				<td class="cost__table-section-price">22 680 руб</td>
-			</tr>
-			<tr class="cost__table-section-button">
-				<td>
-					<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
-				</td>
-			</tr>
-			<tr class="cost__table-section">
-				<td class="cost__table-section-image">
-					<img class="cost__table-section-image-pic" src="/img/bankZenit.png" alt="Zenit">
-					<p class="cost__table-section-descr">БАНК Зенит</p>
-				</td>
-				<td class="cost__table-section-reputation">
-					<span class="cost__table-section-reputation-text">4,6</span>
-					<p class="cost__table-section-reputation-desc">4,6 из 5</p>
-				</td>
-				<td class="cost__table-section-akra">
-					<p class="cost__table-section-akra-text">B B B +</p>
-					<p class="cost__table-section-akra-desc">Стабильный</p>
-				</td>
-				<td class="cost__table-section-price">22 680 руб</td>
-			</tr>
-			<tr class="cost__table-section-button">
-				<td>
-					<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
-				</td>
-			</tr>
-			<tr class="cost__table-section">
-				<td class="cost__table-section-image">
-					<img class="cost__table-section-image-pic" src="/img/bankZenit.png" alt="Zenit">
-					<p class="cost__table-section-descr">БАНК Зенит</p>
-				</td>
-				<td class="cost__table-section-reputation">
-					<span class="cost__table-section-reputation-text">4,6</span>
-					<p class="cost__table-section-reputation-desc">4,6 из 5</p>
-				</td>
-				<td class="cost__table-section-akra">
-					<p class="cost__table-section-akra-text">B B B +</p>
-					<p class="cost__table-section-akra-desc">Стабильный</p>
-				</td>
-				<td class="cost__table-section-price">22 680 руб</td>
-			</tr>
-			<tr class="cost__table-section-button">
-				<td>
-					<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
-				</td>
-			</tr>
-			<tr class="cost__table-section">
-				<td class="cost__table-section-image">
-					<img class="cost__table-section-image-pic" src="/img/bankZenit.png" alt="Zenit">
-					<p class="cost__table-section-descr">БАНК Зенит</p>
-				</td>
-				<td class="cost__table-section-reputation">
-					<span class="cost__table-section-reputation-text">4,6</span>
-					<p class="cost__table-section-reputation-desc">4,6 из 5</p>
-				</td>
-				<td class="cost__table-section-akra">
-					<p class="cost__table-section-akra-text">B B B +</p>
-					<p class="cost__table-section-akra-desc">Стабильный</p>
-				</td>
-				<td class="cost__table-section-price">22 680 руб</td>
-			</tr>
-			<tr class="cost__table-section-button">
-				<td>
-					<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
-				</td>
-			</tr>
-		</table>
+		<template v-if="$vssWidth < 576">
+			<table class="cost__table">
+				<tr class="cost__table-title">
+					<td class="cost__table-title-text">Банк</td>
+					<td class="cost__table-title-text">Рейтинг</td>
+					<td class="cost__table-title-text">АКРА</td>
+					<td class="cost__table-title-text">Стоимость</td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankZenit.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+				</tr>
+				<tr class="cost__table-section-button">
+					<td>
+						<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
+					</td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankLoko.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+				</tr>
+				<tr class="cost__table-section-button">
+					<td>
+						<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
+					</td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankEkspo.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+				</tr>
+				<tr class="cost__table-section-button">
+					<td>
+						<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
+					</td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankOpen.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+				</tr>
+				<tr class="cost__table-section-button">
+					<td>
+						<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
+					</td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankQiwi.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+				</tr>
+				<tr class="cost__table-section-button">
+					<td>
+						<button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button>
+					</td>
+				</tr>
+			</table>
+		</template>
+		<template v-else>
+			<table class="cost__table">
+				<tr class="cost__table-title">
+					<td class="cost__table-title-text">Банк</td>
+					<td class="cost__table-title-text">Рейтинг</td>
+					<td class="cost__table-title-text">АКРА</td>
+					<td class="cost__table-title-text">Стоимость</td>
+					<td class="cost__table-title-text">ОСТАВЬТЕ ЗАЯВКУ</td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankZenit.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+					<td class="cost__table-section-button"><button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button></td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankLoko.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+					<td class="cost__table-section-button"><button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button></td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankEkspo.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+					<td class="cost__table-section-button"><button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button></td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankOpen.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+					<td class="cost__table-section-button"><button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button></td>
+				</tr>
+				<tr class="cost__table-section">
+					<td class="cost__table-section-image">
+						<img class="cost__table-section-image-pic" src="/img/bankQiwi.png" alt="Zenit">
+						<p class="cost__table-section-descr">БАНК Зенит</p>
+					</td>
+					<td class="cost__table-section-reputation">
+						<span class="cost__table-section-reputation-text">4,6</span>
+						<p class="cost__table-section-reputation-desc">4,6 из 5</p>
+					</td>
+					<td class="cost__table-section-akra">
+						<p class="cost__table-section-akra-text">B B B +</p>
+						<p class="cost__table-section-akra-desc">Стабильный</p>
+					</td>
+					<td class="cost__table-section-price">22 680 руб</td>
+					<td class="cost__table-section-button"><button type="button" class="cost__table-button">ОСТАВИТЬ ЗАЯВКУ</button></td>
+				</tr>
+			</table>
+		</template>
+		<div class="cost__button">
+			<button class="cost__button-prev">
+				<i class="fas fa-arrow-left cost__button-prev-icon"></i>
+			</button>
+			<button class="cost__button-next">
+				<i class="fas fa-arrow-right cost__button-next-icon"></i>
+			</button>			
+		</div>
 	</div>
 </section>

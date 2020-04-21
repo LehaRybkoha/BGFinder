@@ -1,5 +1,8 @@
 .cost {
-	background-color: #fff;
+	background-color: #F2F2F2;
+	&-wrapper {
+		padding: 0;
+	}
 	&__title {
 		font-family: $fontRoboto;
 		font-weight: 500;
@@ -7,24 +10,49 @@
 		text-align: center;
 		color: #47515E;
 		padding: 20px 0;
+		@include sm(font-size, rem(22px));
+		@include lg(font-size, rem(28px));
+		@include lg(padding, 30px 0);
 	}
 	&__table {
+		position: relative;
+		box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
 		margin: 0 auto;
 		border-spacing: 0 10px;
+		border-collapse: collapse;
+		margin-bottom: 20px;
+		background-color: #fff;
 		&-title {
 			&-text {
 				font-family: $fontRoboto;
 				font-size: rem(14px);
 				color: #212B36;
 				background-color: #ECEDF0;
-				padding: 15px;
+			    padding: 10px 10px 10px 20px !important;
+			    @include xl(padding, 20px 10px 15px 80px !important);
+			    @include lg(padding, 20px 10px 15px 60px !important);
+			    @include md(padding, 20px 10px 15px 40px !important);
+			    @include xl(font-size, rem(16px));
 			}
 		}
 		&-section {
+			&-image {
+				&-pic {
+					@include md(width, 43px);
+					@include lg(width, 80px);
+				}
+			}
+			& td {
+			    padding: 10px 0 0 20px !important;
+			    @include xl(padding, 20px 10px 15px 80px !important);
+			    @include lg(padding, 20px 10px 15px 60px !important);
+			    @include md(padding, 20px 10px 15px 40px !important);
+			}
 			&-descr {
 				font-family: $fontPoppins;
 				font-size: rem(10px);
 				color: #919EAB;
+				@include lg(font-size, rem(14px));
 			}
 			&-reputation {
 				&-text {
@@ -32,11 +60,15 @@
 					font-weight: 300;
 					font-size: rem(12px);
 					color: $mainBlueColor;
+					@include lg(font-size, rem(26px));
+					@include xl(font-size, rem(16px));
 				}
 				&-desc {
 					font-family: $fontPoppins;
 					font-size: rem(10px);
 					color: #919EAB;
+					@include lg(font-size, rem(12px));
+					@include xl(font-size, rem(14px));
 				}
 			}
 			&-akra {
@@ -44,11 +76,14 @@
 					font-family: $fontPoppins;
 					font-size: rem(12px);
 					color: #212B36;
+					@include xl(font-size, rem(16px));
 				}
 				&-desc {
 					font-family: $fontPoppins;
 					font-size: rem(10px);
 					color: #919EAB;
+					@include lg(font-size, rem(12px));
+					@include xl(font-size, rem(14px));
 				}
 			}
 			&-price {
@@ -56,10 +91,11 @@
 				font-size: rem(12px);
 				font-weight: 300;
 				color: $mainBlueColor;
+				@include lg(font-size, rem(18px));
+				@include xl(font-size, rem(26px));
 			}
 			&-button {
-				position: relative;
-				height: 30px;
+				height: 44px;
 				& td {
 					padding-bottom: 26px;
 				}
@@ -75,7 +111,32 @@
 			background-color: #fff;
 			padding: 7px 10px;
 			position: absolute;
-			left: 29%;
+			left: 50%;
+		    margin-left: -70px;
+		    @include sm(position, static);
+		    @include sm(margin-left, 0);
+		    @include xl(font-size, rem(18px));
 		}
 	}
+	&__button {
+		text-align: center;
+		&-prev, &-next {
+			color: #424C5A;
+			background: none;
+			padding: 5px 20px 4px 20px;
+			margin: 0 15px;
+			border: 1px solid #424C5A;
+			border-radius: 5px;
+			@include md(font-size, 20px)
+			@include md(font-size, 25px);
+		}
+	}
+}
+
+.asd__keyboard-shortcuts-trigger {
+	display: none;
+}
+
+.asd__action-buttons {
+	display: none;
 }

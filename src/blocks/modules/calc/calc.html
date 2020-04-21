@@ -1,4 +1,4 @@
-<section class="calc">
+<section id="calc" class="calc">
 		<div class="container calc-wrapper">
 			<div class="calc__title">
 				<div class="calc__title-wrapper">
@@ -15,8 +15,7 @@
 				<p class="calculator__title">Финансовые продукты</p>
 					<select id="calcSelectVal" name="calcSelectVal" class="calculator__select">
 						<option class="calculator__option" disabled selected>Выберите из списка</option>
-						<optgroup class="calculator__optgroup" label="Финансовые продукты:">
-							<option class="calculator__option" v-for="item in calcList" :key="item.calcList">{{ item.calcText }}</option>
+						<option class="calculator__option" v-for="item in calcList" :key="item.calcList">{{ item.calcText }}</option>
 						</optgroup>
 					</select>
 				<p class="calculator__title">Сумма, руб</p>
@@ -49,6 +48,4 @@
 				<p class="calc__desc-price">Стоимость от 0 руб.</p>
 			</div>
 		</div>
-
 </section>
-

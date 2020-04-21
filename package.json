@@ -4,7 +4,7 @@
     "author": "Aleksei",
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/LehaRybkoha/BGFinder/tree/master"
     },
     "license": "MIT",
     "scripts": {
@@ -31,7 +31,9 @@
         "bem-tools-core": "bem-tools/bem-tools-core",
         "bem-tools-create": "bem-tools/bem-tools-create",
         "browser-sync": "^2.23.6",
+        "deepmerge": "^4.2.2",
         "del": "^4.1.1",
+        "fibers": "^4.0.2",
         "gulp": "^4.0.0",
         "gulp-autoprefixer": "^5.0.0",
         "gulp-clean-css": "^3.9.2",
@@ -56,18 +58,32 @@
         "imagemin-webp": "^5.0.0",
         "imagemin-zopfli": "^6.0.0",
         "require-dir": "^1.2.0",
+        "sass": "^1.26.3",
+        "sass-loader": "^8.0.2",
         "stylelint": "^10.0.1",
         "stylelint-order": "^3.0.0",
         "stylelint-selector-bem-pattern": "^2.1.0",
+        "vue-loader": "^14.2.2",
+        "vue-resize": "^0.4.5",
         "webpack": "^4.30.0",
         "webpack-stream": "^5.2.1",
-        "yargs": "^12.0.5",
-        "vue-loader": "^14.2.2"
+        "yargs": "^12.0.5"
     },
     "dependencies": {
+        "date-fns": "^2.11.1",
         "jquery": "^3.4.1",
+        "moment": "^2.24.0",
         "smart-grid": "^2.1.2",
-        "vue": "^2.6.11"
+        "vue": "^2.6.11",
+        "vue-airbnb-style-datepicker": "^2.7.1",
+        "vue-carousel": "^0.18.0",
+        "vue-router": "^3.1.6",
+        "vue-screen-size": "^1.0.1",
+        "vue-scrollto": "^2.18.1",
+        "vue-slider-component": "^3.1.1",
+        "vuejs-datepicker": "^1.6.2",
+        "vuejs-range-datepickers": "^2.0.0",
+        "vuetify": "^2.2.20"
     },
     "peerDependencies": {
         "vue-template-compiler": "^2.6.11"

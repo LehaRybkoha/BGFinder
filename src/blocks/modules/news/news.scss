@@ -1,0 +1,211 @@
+.news {
+	&-feedblog-wrapper {
+		@include md(display, flex);
+		@include md(justify-content, center);		
+	}
+	&__title {
+		margin: 20px 0;
+		@include lg(margin, 70px);
+		@include xl(margin, 85px);
+		&-text {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(16px);
+			color: #47515E;
+			text-align: center;
+			@include md(font-size, rem(28px));
+			@include lg(font-size, rem(36px));
+			@include xl(font-size, rem(48px));
+		}
+		&-line {
+			border: 1px solid #C4CDD5;
+			max-width: 228px;
+			@include lg(max-width, 334px);
+			@include xl(max-width, 480px);
+		}
+		&-desc {
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			text-align: center;
+			color: #212B36;
+			max-width: 400px;
+			margin: 0 auto;
+			@include md(font-size, rem(14px));
+			@include lg(font-size, rem(20px));
+			@include lg(max-width, 815px);
+			@include xl(font-size, rem(28px));
+			@include xl(max-width, 1117px);
+		}
+	}
+	&-blog {
+		padding: 10px;
+		@include md(margin-right, 20px);
+		@include md(padding, 0);
+		&__list {
+			@include lg(margin-bottom, 70px);
+			@include xl(margin-bottom, 85px);
+		}
+		&__item {
+			display: flex;
+			max-width: 470px;
+			background-color: #F9FAFB;
+			justify-content: center;
+			margin: 10px auto;
+			@include md(margin, 10px 0);
+			@include lg(margin, 0 0 25px 0);
+			@include lg(max-width, 585px);
+			@include xl(max-width, 840px);
+			&-left {
+				margin-right: 15px;
+				&-pic {
+				    height: 100%;
+				    width: 110px;
+				    object-fit: cover;
+				    @include md(width, 207px);
+				    @include md(min-height, 115px);
+				    @include lg(width, 260px);
+				    @include lg(min-height, 150px);
+				    @include xl(min-height, 205px);
+				    @include xl(width, 365px);
+				}
+			}
+			&-right {
+				width: 100%;
+				&-head {
+					padding: 12px 0 17px 0;
+					display: flex;
+					justify-content: center;
+					&--text {
+						font-family: $fontRoboto;
+						font-size: rem(8px);
+						color: #919EAB;
+						padding-right: 6px;
+						@include lg(font-size, rem(12px));
+						@include xl(font-size, rem(18px));
+						@include xl(padding-right, 15px);
+					}
+				}
+				&-main {
+					display: flex;
+					justify-content: center;
+					&--text {
+						font-family: $fontRoboto;
+						font-weight: 500;
+						font-size: rem(10px);
+						color: #212B36;
+						@include md(font-size, rem(12px));
+						@include lg(font-size, rem(18px));
+						@include xl(font-size, rem(26px));
+					}
+				}
+				&-footer {
+					display: flex;
+					justify-content: space-around;
+					padding: 30px 0 12px 0;
+					&--text {
+						font-family: $fontRoboto;
+						font-size: rem(8px);
+						color: #919EAB;
+						@include md(font-size, rem(10px));
+						@include lg(font-size, rem(12px));
+						@include xl(font-size, rem(18px));
+					}
+					&--button {
+						font-family: $fontRoboto;
+						font-weight: bold;
+						font-size: rem(10px);
+						color: #176BE0;
+						text-transform: uppercase;
+						@include lg(font-size, rem(14px));
+						@include xl(font-size, rem(18px));
+					}
+				}
+			}
+		}
+	}
+	&-feedback {
+		@include md(max-width, 221px);
+		@include lg(max-width, 274px);
+		@include xl(max-width, 400px);
+		&__link {
+			padding: 20px 25px 33px 25px;
+			background: linear-gradient(0deg, #0AB9EB 0%, #1180E4 36.98%, #176BE0 96.87%);
+			&-line {
+				border: 1px solid #fff;
+				max-width: 26px;
+				margin: 0 auto 10px 0;
+			}
+			&-title {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(16px);
+				text-align: center;
+				color: #fff;
+				margin-bottom: 20px;
+				@include md(text-align, left);
+				@include lg(font-size, rem(24px));
+				@include xl(font-size, rem(30px));
+				@include xl(margin-bottom, 40px);
+			}
+			&-desc {
+				font-family: $fontRoboto;
+				font-size: rem(10px);
+				text-align: center;
+				color: #fff;
+				margin-bottom: 25px;
+				max-width: 400px;
+				margin: 0 auto 25px auto;
+				@include md(text-align, left);
+				@include lg(font-size, rem(12px));
+				@include xl(font-size, rem(16px));
+				@include xl(margin, 0 auto 100px auto);
+			}
+			&-block {
+				text-align: center;
+				&-text {
+					font-family: $fontRoboto;
+					font-weight: 500;
+					font-size: rem(12px);
+					text-transform: uppercase;
+					color: #fff;
+					border: 1px solid #fff;
+					padding: 8px 40px;
+					@include md(font-size, rem(10px))
+					@include lg(font-size, rem(14px))
+				}
+			}
+		}
+		&__application {
+			background-color: #fff;
+			padding: 20px 25px 33px 25px;
+			text-align: center;
+			@include md(box-shadow, 0px 1px 4px rgba(0, 0, 0, 0.25));
+			@include md(margin-top, 20px);
+			&-line {
+				border: 1px solid #000;
+				max-width: 26px;
+				margin: 0 auto 20px 0;
+			}
+			&-text {
+				font-family: $fontRoboto;
+				font-size: rem(16px);
+				color: #212B36;
+				text-align: center;
+				margin-bottom: 25px;
+				@include md(text-align, left);
+				@include md(line-height, 24px);
+				@include md(font-size, rem(16px));
+				@include lg(font-size, rem(20px))
+				@include xl(font-size, rem(28px));
+				@include xl(margin-bottom, 75px);
+				@include xl(line-height, 32px);
+			}
+			&-button {
+				@include buttonStyles;
+				padding: 8px 45px!important;
+				@include md(font-size, rem(10px));
+				@include lg(font-size, rem(14px));
+			}
+		}
+	}
+}

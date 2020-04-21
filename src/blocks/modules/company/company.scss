@@ -1,0 +1,164 @@
+.company {
+	padding: 0 18px 30px 18px;
+	position: relative;
+	@include lg(padding, 0 25px);
+	@include xl(padding, 0 60px);
+		&::before {
+			content: "";
+			background-image:url(/img/companyBg.png);
+			background-size: cover;
+			position: absolute;
+			width: 200%;
+			left: 0;
+			height: 100%;
+			z-index: -1;
+			@include md(width, 110%);
+			@include md(left, -50%);
+			@include lg(left, -47%);
+			@include xl(left, -54%);
+		}
+		&-wrapper {
+			@include md(max-width, 100%!important);
+			@include md(margin, 0);
+			@include md(padding, 0);
+			@include md(left, -50%);
+			@include md(display, flex);
+			@include md(justify-content, space-between);
+			@media screen and (min-width: 2000px) {
+				max-width: 2000px!important;
+				margin: 0 auto;
+	    	}
+		}
+		&-line {
+			max-width: 121px;
+			border: 1px solid #fff;
+			@include xl(max-width, 410px);
+			@include lg(max-width, 178px);
+		}
+		&-main {
+			@include md(min-width, 50%);
+			&__title {
+				margin-bottom: 18px;
+				@include md(margin-bottom, 25px);
+				@include lg(margin-bottom, 40px);
+				@include xl(margin-bottom, 50px);
+				&-text {
+					font-family: $fontRoboto;
+					font-weight: 500;
+					font-size: rem(16px);
+					color: #fff;
+					text-align: center;
+					padding: 22px 20px;
+					padding-bottom: 0;
+					@include md(padding, 22px 0);
+					@include md(font-size, rem(32px));
+					@include lg(padding-top, 45px);
+					@include lg(font-size, rem(46px));
+					@include xl(padding-top, 50px);
+					@include xl(font-size, rem(60px));
+				}
+		}
+		&__desc {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			color: #fff;
+			font-size: rem(10px);
+			&-text {
+				margin: 0 auto;
+				margin-bottom: 28px;
+				max-width: 314px;
+				@include md(max-width, 300px);
+				@include md(font-size, rem(12px));
+				@include md(line-height, 14px);
+				@include md(margin-bottom, 35px);
+				@include md(margin-left, 4%);
+				@include lg(max-width, 450px);
+				@include lg(font-size, rem(16px));
+				@include lg(line-height, 21px);
+				@include lg(margin-bottom, 50px);
+				@include lg(margin-left, 0);
+				@include xl(max-width, 500px);
+				@include xl(font-size, rem(20px));
+				@include xl(margin-bottom, 60px);
+				@media screen and (min-width: 850px) {
+		    		margin-left: 15%;
+		    	}
+		    	@media screen and (min-width: 1440px) {
+		    		margin-left: 20%;
+		    	}
+				&--two {
+					@include md(max-width, 260px);
+					@include lg(max-width, 390px);
+					@include xl(max-width, 420px);
+				}
+				&--three {
+					@include md(max-width, 170px);
+					@include lg(max-width, 220px);
+					@include xl(max-width, 278px);
+				}
+			}
+		}
+	}
+	&-advantages {
+		margin: 0 auto;
+		max-width: 250px;
+		@include lg(margin-top, 115px);
+		@include lg(max-width, 350px);
+		@include lg(max-width, 41.5%);
+		&__title {
+			&-text {
+				font-family: $fontRoboto;
+				color: #fff;
+				font-weight: 500;
+				font-size: rem(14px);
+				text-align: center;
+				margin: 28px 0;
+				@include md(margin, 40px 0);
+				@include md(text-align, left);
+				@include md(color, #47516E);
+				@include md(font-size, rem(22px));
+				@include md(line-height, 26px);
+				@include lg(font-size, rem(32px));
+				@include lg(line-height, 37px);
+				@include xl(font-size, rem(42px));
+				@include xl(line-height, 48px);
+				@include xl(margin, 70px 0);
+			}
+		}
+		&__list {
+			max-width: max-content;
+			margin: 0 auto;
+		}
+		&__item {
+			margin-bottom: 20px;
+			position: relative;
+			@include md(margin-bottom, 30px);
+			@include lg(margin-bottom, 55px);
+			@include xl(margin-bottom, 60px);
+			&-text {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(12px);
+				color: #fff;
+				display: flex;
+				align-items: baseline;
+				@include md(color, #5E6875);
+				@include sm(font-size, rem(12px));
+				@include md(font-size, rem(18px));
+				@include md(font-weight, 500);
+				@include lg(font-size, rem(26px));
+				@include xl(font-size, rem(34px));
+				@include xl(line-height, 40px);
+			}
+			&-pic {
+				padding-right: 8px;
+				@include xl(width, 35px);
+				@include xl(left, -50px);
+				@include xl(top, 5px);
+				@include md(width, 27px);
+				position: absolute;
+				left: -30px;
+			}
+		}
+	}
+}

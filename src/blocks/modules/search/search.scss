@@ -1,0 +1,226 @@
+.search {
+	&__title {
+		margin: 25px 0;
+		&-text {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(14px);
+			color: #212B36;
+			@include md(font-size, rem(22px));
+			@include lg(font-size, rem(28px));
+			@include xl(font-size, rem(36px));
+		}
+	}
+	&__checkbox {
+		display: flex;
+		@include md(box-shadow, 0px 1px 4px rgba(0, 0, 0, 0.25));
+		&-label {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(10px);
+			text-align: center;
+			text-transform: uppercase;
+			color: #212B36;
+			width: 50%;
+			padding: 12px 0;
+			cursor: pointer;
+			@include md(font-size, rem(14px));
+			@include xl(font-size, rem(18px));
+		}
+		&-input[type=radio]:checked + label.search__checkbox-label {
+    		color: $mainBlueColor;
+    		border-bottom: 2px solid $mainBlueColor;
+		}
+		&-input[type=radio] {
+			position: absolute;
+			left: -9999px;
+		}
+	}
+	&__content {
+		&-title {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(12px);
+			color: #212B36;
+			margin: 40px 0 22px 0;
+			@include md(font-size, rem(15px));
+			@include lg(font-size, rem(18px));
+			@include xl(font-size, rem(32px));
+		}
+		&-input {
+			min-width: 100%;
+			height: 30px;
+			border: 1px solid #D4DEE7;
+			border-radius: 2px;
+			background-color: #fff;
+			font-size: rem(8px);
+			color: #283D4A;
+			opacity: 0.5;
+			font-family: $fontRoboto;
+			padding-left: 10px;
+			margin-bottom: 22px;
+			@include md(font-size, rem(10px));
+			@include lg(font-size, rem(14px));
+			@include lg(height, 40px);
+			@include xl(font-size, rem(16px));
+
+		}
+		&-checkblock {
+			margin-bottom: 22px;
+		}
+		&-checkbox-label {
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			color: #5E6875;
+			@include md(font-size, rem(14px));
+			@include xl(font-size, rem(18px));
+		}
+		&-checkbox {
+			display: none;
+		}
+		&-button {
+			margin: 0 auto 50px auto;
+			@include buttonStyles;
+			padding: 10px 70px !important;
+			text-align: center;
+			display: block;
+			font-size: rem(12px) !important;
+			@include md(margin, 0 0 50px 0);
+			@include lg(font-size, rem(14px)!important);
+			@include xl(font-size, rem(18px)!important);
+		}
+	}
+	&__item {
+		background-color: #fff;
+		padding: 20px 20px 25px 20px;
+		margin-bottom: 22px;
+		box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.0927027), 0px 6px 10px rgba(0, 0, 0, 0.0647079);
+		border: 1px solid #fff;
+		border-radius: 5px;
+		&-title {
+			display: flex;
+		    align-items: center;
+		    justify-content: space-between;
+			margin-bottom: 5px;
+			&-link {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(16px);
+				color: $mainBlueColor;
+				@include lg(font-size, rem(18px));	
+				@include xl(font-size, rem(24px));	
+			}
+			&-date {
+				font-family: $fontRoboto;
+				font-size: rem(12px);
+				color: #556471;
+				@include lg(font-size, rem(16px));
+				@include xl(font-size, rem(18px));
+			}
+		}
+		&-status {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(12px);
+			color: #01AC5A;
+			margin-bottom: 10px;
+			@include lg(font-size, rem(14px));
+			@include xl(font-size, rem(18px));
+		}
+		&-content {
+			&-applicant-text, &-customer-text {
+				font-family: $fontRoboto;
+				font-weight: 500;
+				font-size: rem(12px);
+				color: #637381;
+				padding-right: 16px;
+				@include lg(font-size, rem(14px));
+				@include xl(font-size, rem(16px));
+			}
+			&-report-text, &-purchase-text {
+				padding-right: 16px;
+			}
+			&-applicant-info, &-customer-info {
+				font-family: $fontRoboto;
+				font-size: rem(10px);
+				color: #637381;
+				@include lg(font-size, rem(12px));
+				@include xl(font-size, rem(16px));
+			}
+			&-applicant {
+				margin-bottom: 10px;
+				display: flex;
+			}
+			&-customer {
+				margin-bottom: 25px;
+				display: flex;
+			}
+			&-purchase {
+				margin-bottom: 20px;
+				display: flex;
+			}
+			&-report {
+				display: flex;
+			}
+			&-purchase-text, &-purchase-info, &-report-text, &-report-info {
+				font-family: $fontRoboto;
+				font-size: rem(12px);
+				color: #637381;
+				@include lg(font-size, rem(14px));
+				@include xl(font-size, rem(16px));
+			}
+		}
+	}
+}
+
+.website-nav {
+	background: rgba(196, 196, 196, 0.1);
+	padding: 15px 20px;
+	margin-top: 20px;
+	&__link {
+		font-family: $fontRoboto;
+		font-size: rem(12px);
+		color: #212B36;
+		@include lg(font-size, rem(14px));
+		@include xl(font-size, rem(18px));
+	}
+}
+
+.search__content-checkbox:checked + .search__content-checkbox-label:after {
+	content: "";
+    position: absolute;
+    -webkit-border-radius: 4px;
+    border-radius: 0;
+    left: 3px;
+    bottom: 7px;
+    width: 18px;
+    height: 9px;
+    border-left: 3px solid $mainBlueColor;
+    border-bottom: 3px solid $mainBlueColor;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.search__content-checkbox-label {
+	position: relative;
+	&::after {
+
+	}
+}
+
+.search__content-checkbox-label:before {
+	content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px solid #D4DEE7;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    cursor: pointer;
+    top: 3px;
+    margin: 0 .625rem -.250rem 0;
+}

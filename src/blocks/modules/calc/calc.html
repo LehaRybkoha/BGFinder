@@ -1,0 +1,51 @@
+<section id="calc" class="calc">
+		<div class="container calc-wrapper">
+			<div class="calc__title">
+				<div class="calc__title-wrapper">
+					<h3 class="calc__desc-title calc__desc-title--sm">Узнайте стоимость банковской гарантии</h3>
+					<div class="calc__title-text-wrapper">
+						<h2 class="calc__title-text">Расчет стоимости финансовых продуктов</h2>
+						<p class="calc__title-price">Стоимость<br>от 0 руб.</p>
+					</div>
+				</div>
+				<hr class="calc-line">
+				<p class="calc__title-desc">Калькулятор ориентировочной стоимости финансовых продуктов </p>
+			</div>
+			<div class="calculator">
+				<p class="calculator__title">Финансовые продукты</p>
+					<select id="calcSelectVal" name="calcSelectVal" class="calculator__select">
+						<option class="calculator__option" disabled selected>Выберите из списка</option>
+						<option class="calculator__option" v-for="item in calcList" :key="item.calcList">{{ item.calcText }}</option>
+						</optgroup>
+					</select>
+				<p class="calculator__title">Сумма, руб</p>
+				<div class="calculator__range">
+					<vue-slider class="calculator__range-slider" :interval="100" :max="200000000" :dot-size="20" v-model="value"></vue-slider>
+					<input type="text" class="calculator__range-text" v-model="value">
+				</div>
+				<p class="calculator__title">Период</p>
+				<div id="dateBlock" class="clock calculator__date datepicker-trigger">
+				<input
+					class="clock calculator__date-input"
+					type="text" id="trigger-range"
+					:value="formatDates(dateOne, dateTwo)"
+					:placeholder="minDate"
+					readonly>
+				 <airbnb-style-datepicker
+				 	:mode="'range'"
+			        :trigger-element-id="'trigger-range'"
+			        :date-one="dateOne"
+			        :date-two="dateTwo"
+			        v-on:date-one-selected="function(val) { dateOne = val }"
+			        v-on:date-two-selected="function(val) { dateTwo = val }"
+			        :min-date="minDate"
+	  			></airbnb-style-datepicker>
+					<button type="button" class="calculator__date-button">Рассчитать</button>
+				</div>
+			</div>
+			<div class="calc__desc">
+				<h3 class="calc__desc-title">Узнайте стоимость банковской гарантии</h3>
+				<p class="calc__desc-price">Стоимость от 0 руб.</p>
+			</div>
+		</div>
+</section>

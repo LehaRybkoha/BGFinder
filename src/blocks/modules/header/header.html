@@ -1,0 +1,50 @@
+<header class="header">
+	<div class="container header-wrapper">
+		<div class="header-left">
+			<template v-if="$vssWidth < 768">
+				<nav class="nav">
+					<transition name="fade" mode="out-in">
+						<i class="fas fa-bars navOpen" v-if="!showNav" @click="showNav = !showNav" key="open"></i>
+						<i class="fas fa-times navClose" v-else="!close" @click="showNav = !showNav" key="close"></i>
+					</transition>
+					<transition name="fade">
+						<ul class="nav__list" v-if="showNav">
+							<h3 class="nav-title">Меню</h3>
+							<li class="nav__item" v-for="item in navList" :key="item.navList">
+								<a :href="item.navLinks" class="nav__item-link">{{ item.navOption }}</a>
+							</li>
+						</ul>
+					</transition>
+				</nav>
+			</template>
+			<div class="logo">
+				<a href="/index.html" class="logo-link">
+					<img src="/img/logo.png" alt="Logotip" class="logo-link-pic">
+				</a>
+			</div>
+			<template v-if="$vssWidth > 767">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item" v-for="item in navList" :key="item.message">
+							<a :href="item.navLinks" class="nav__item-link">{{ item.navOption }}</a>
+						</li>
+					</ul>
+				</nav>
+			</template>
+		</div>
+		<hr class="header-line">
+		<div class="header-right">
+			<div class="header-right__feedback-data">
+				<p class="header-right__feedback-data-phone">
+					<img src="/img/phoneIcon.svg" alt="Phone Icon" class="phoneIcon">
+					<a href="tel:+78005557881" class="header-right__feedback-data-phone--link">8 (800) 555-78-81</a>
+				</p>
+				<p class="header-right__feedback-data-email">
+					<img src="/img/emailIcon.svg" alt="Email Icon" class="emailIcon">
+					<a href="mailto:info.finance@gmail.com" class="header-right__feedback-data-phone--link">info.finance@gmail.com</a>
+				</p>
+			</div>
+			<a href="tel: 8 (800) 555-78-81" class="header-right__feedback-button">Обратный звонок</a>
+		</div>
+	</div>
+</header>

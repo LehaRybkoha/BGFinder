@@ -1,0 +1,360 @@
+.blog {
+	&__title {
+		margin: 20px auto 30px auto;
+		max-width: 260px;
+		@include sm(max-width, 100%);
+		@media screen and (min-width: 360px) {
+    		max-width: 350px;
+    	}
+		&-text {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: 14px;
+			color: #212B36;
+			margin-bottom: 20px;
+			text-align: center;
+			@include md(text-align, left);
+			@include md(font-size, rem(22px));
+			@include lg(font-size, rem(26px))
+			@include xl(font-size, rem(36px));
+			@media screen and (min-width: 360px) {
+	    		font-size: rem(16px);
+	    	}
+		}
+		&-desc {
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			text-align: center;
+			color: #212B36;
+			@include md(font-size, rem(14px));
+			@include lg(font-size, rem(18px));
+			@include xl(font-size, rem(22px));
+			@include md(text-align, left);
+			@media screen and (min-width: 360px) {
+	    		font-size: rem(12px);
+	    	}
+		}
+	}
+	&__checkbox {
+		display: flex;
+		margin-bottom: 30px;
+		@include md(box-shadow, 0px 1px 4px rgba(0, 0, 0, 0.25));
+		&-label {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(10px);
+			text-align: center;
+			text-transform: uppercase;
+			color: #212B36;
+			width: 50%;
+			padding: 12px 0;
+			cursor: pointer;
+			@include md(font-size, rem(14px));
+			@include xl(font-size, rem(18px));
+		}
+		&-input[type=radio]:checked + label.blog__checkbox-label {
+    		color: $mainBlueColor;
+    		border-bottom: 2px solid $mainBlueColor;
+		}
+		&-input[type=checkbox]:checked + label.blog__checkbox-label--tag {
+    		color: $mainBlueColor;
+    		border: 2px solid $mainBlueColor;
+    		opacity: 1;
+		}
+		&-input[type=checkbox]:checked + label.blog__checkbox-label--category {
+    		color: $mainBlueColor;
+    		border: 2px solid $mainBlueColor;
+    		opacity: 1;
+    		.blog__checkbox-label-count {
+    			border-left: 1px solid $mainBlueColor;;
+    		}
+		}
+		&-input[type=radio], &-input[type=checkbox] {
+			position: absolute;
+			left: -9999px;
+		}
+		&-label--tag {
+			border: 2px solid #9E9E9E;
+			border-radius: 50px;
+			padding: 7px 16px;
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			color: rgba(0, 0, 0, 0.38);
+			margin: 7px;
+			opacity: 0.6;
+			@include lg(font-size, rem(14px));
+			@include lg(margin, 12px);
+			@include xl(font-size, rem(16px));
+		}
+		&-label--category {
+			border: 2px solid #9E9E9E;
+			border-radius: 6px;
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			color: rgba(0, 0, 0, 0.38);
+			margin: 7px;
+			padding: 7px 6px;
+			opacity: 0.6;
+			@include lg(font-size, rem(14px));
+			@include lg(margin, 12px);
+			@include xl(font-size, rem(16px));
+		}
+		&-label-count {
+			color: $mainBlueColor;
+			border-left: 1px solid rgba(0, 0, 0, 0.38);
+			padding-left: 9px;
+		}
+		&-label-wrapper {
+			padding-right: 9px;
+		}
+		&-list {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-bottom: 20px;
+		}
+	}
+	&__search {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 40px;
+		&-input {
+			font-family: $fontRoboto;
+			font-size: rem(12px);
+			color: #283D4A;
+			min-width: 240px;
+			height: 30px;
+			padding-left: 13px;
+			border-top: 1px solid #D4DEE7;
+			border-left: 1px solid #D4DEE7;
+			border-bottom: 1px solid #D4DEE7;
+			border-right: none;
+			border-radius: 2px 0 0 2px;
+			background-color: #fff;
+			opacity: 0.5;
+			@include sm(width, 100%);
+			@include sm(border-right, 1px solid #D4DEE7);
+			@include lg(font-size, rem(14px));
+			@include xl(font-size, rem(18px));
+			@include lg(height, 35px);
+			@include xl(height, 40px);
+		}
+		&-button {
+			font-size: rem(12px);
+			color: #fff;
+			height: 30px;
+			background-color: #176CE0;
+			border-radius: 0px 2px 2px 0px;
+			padding: 0 20px;
+			@include sm(border-radius, 2px);
+			@include sm(padding, 0 45px);
+			@include sm(margin-left, 28px);
+			@include lg(font-size, rem(14px));
+			@include xl(font-size, rem(18px));
+			@include lg(height, 35px);
+			@include xl(height, 40px);
+		}
+	}
+	&__item {
+		margin-bottom: 26px;
+		padding: 13px 30px 30px 30px;
+		border: 1px solid #fff;
+		background-color: #fff;
+		box-shadow: 0px 1px 18px rgba(0, 0, 0, 0.0927027), 0px 6px 10px rgba(0, 0, 0, 0.0647079);
+		border-radius: 5px;
+		@include md(padding, 0);
+		@include md(display, flex);
+		&-left {
+			text-align: center;
+			&-pic {
+				width: 219px;
+				object-fit: cover;
+				margin: 0 auto;
+				@include md(height, 100%);
+				@include lg(width, 332px);
+				@include xl(width, 420px);
+			}
+		}
+		&__link {
+			display: block;
+		}
+		&-right {
+			@include md(padding-left, 20px);
+			@include md(display, flex);
+			@include md(flex-wrap, wrap);
+			@include md(align-items, center);
+			&-head {
+				display: flex;
+				justify-content: center;
+				@include md(padding, 12px 0 26px 0);
+				@include md(display, block);
+				&--text {
+					font-family: $fontRoboto;
+					font-size: rem(11px);
+					color: #919EAB;
+					margin: 26px 0 18px 0;
+					@include md(font-size, rem(12px));
+					@include lg(font-size, rem(16px));
+					@include xl(font-size, rem(18px));
+				}
+			}
+			&-main {
+				margin-bottom: 36px;
+				@include md(margin-bottom, 20px);
+				&--text {
+					font-family: $fontRoboto;
+					font-weight: 500;
+					font-size: rem(14px);
+					color: #212B36;
+					text-align: center;
+					@include md(font-size, rem(18px));
+					@include md(text-align, left);
+					@include lg(font-size, rem(22px));
+					@include xl(font-size, rem(28px));
+				}
+				&--link {
+					color: #212B36;
+				}
+			}
+			&-footer {
+				@include md(display, flex);
+			}
+			&-date {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 20px;
+				@include md(padding-right, 36px);
+				@include md(margin-bottom, 0);
+				@include md(display, block);
+				&--text {
+					font-family: $fontRoboto;
+					font-size: rem(12px);
+					color: #919EAB;
+					@include md(margin-bottom, 10px);
+					@include lg(font-size, rem(14px));
+					@include xl(font-size, rem(18px));
+				}
+				&--icon {
+					padding-right: 5px;
+				}
+			}
+			&-time {
+				display: flex;
+				margin-bottom: 20px;
+				&--text {
+					font-family: $fontRoboto;
+					font-size: rem(12px);
+					color: #919EAB;
+					@include lg(font-size, rem(14px));
+					@include xl(font-size, rem(18px));
+				}
+				&--icon {
+					padding-right: 5px;
+				}
+			}
+		}
+	}
+	&__themes {
+		font-family: $fontRoboto;
+		font-weight: 500;
+		font-size: rem(12px);
+		color: #212B36;
+		margin-bottom: 28px;
+		@include md(font-size, rem(16px));
+		@include lg(font-size, rem(18px));
+		@include xl(font-size, rem(28px));
+	}
+}
+
+.slide {
+	&-wrapper {
+		background: #FFFFFF;
+		border: 1px solid #EEEEEE;
+		border-radius: 5px;
+		max-width: 230px;
+		margin: 0 auto;
+		@include xl(max-width, 330px);
+	}
+	&__head-pic{
+		width: 230px;
+		@include xl(width, 330px);
+		@include xl(height, 200px);
+		height: 130px;
+	}
+	&__content {
+		padding: 30px 10px 0 10px;
+		&-text {
+			font-family: $fontRoboto;
+			font-size: rem(10px);
+			color: #919EAB;
+			@include xl(font-size, rem(15px));
+		}
+		&-desc {
+			font-family: $fontRoboto;
+			font-weight: 500;
+			font-size: rem(14px);
+			color: #212B36;
+			text-align: left;
+			margin: 20px 0 32px 0;
+			@include xl(font-size, rem(22px));
+		}
+	}
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 10px 30px 10px;
+		&-text {
+			font-family: $fontRoboto;
+			font-size: rem(12px);
+			color: #919EAB;
+			@include xl(font-size, rem(18px));
+		}
+	}
+	&__button {
+		font-family: $fontRoboto;
+		font-weight: bold;
+		font-size: rem(10px);
+		color: #176BE0;
+		background: none;
+		text-transform: uppercase;
+		@include xl(font-size, rem(18px));
+	}
+}
+.padding-slide--style {
+	padding-right: 5px;
+}
+.padding--style {
+	padding-right: 5px;
+}
+
+.blog__carousel {
+	margin-bottom: 40px;	
+	&-title {
+		font-family: $fontRoboto;
+		font-weight: 500;
+		font-size: rem(14px);
+		text-align: center;
+		color: #212B36;
+		margin: 45px 0 20px 0;
+		@include xl(font-size, rem(36px));
+		@include lg(font-size, rem(36px));
+		@include lg(text-align, left);
+		@include lg(font-size, rem(24px));
+		@include md(font-size, rem(22px));
+		@include sm(font-size, rem(20px));
+	}
+}
+
+.VueCarousel-navigation-button {
+	padding: 0!important;
+	margin: 0 10px;
+}
+
+.VueCarousel-dot-container {
+	display: none!important;
+}
+
+.carousel__icon {
+	font-size: rem(22px);
+	color: #979797;
+}

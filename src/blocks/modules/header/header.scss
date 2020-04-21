@@ -1,0 +1,127 @@
+.header {
+    &-wrapper {
+    	@include md(display, flex);
+    	@include md(justify-content, space-between);
+    	@include sm(max-width, 100%!important);
+    	@include lg(max-width, 930px!important);
+    	@include xl(max-width, 1110px!important);
+    }
+	&-left {
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	&-right {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		@include md(justify-content, center);
+		@include md(align-items, safe);
+		@include md(flex-direction, column);
+		@media screen and (min-width: 890px) {
+    		flex-direction: initial;
+    	}
+		&__feedback {
+			&-data {
+				&-phone, &-email {
+					&--link {
+						font-family: $fontPoppins;
+						font-size: rem(10px);
+						@include sm(font-size, rem(15px));
+						@include lg(font-size, rem(16px));
+						color: #454F5B;
+						padding-left: 8px;
+						@media screen and (min-width: 360px) {
+    						font-size: rem(12px);
+    					}
+					}
+				}
+				&-phone {
+					padding-bottom: 6px;
+				}
+			}
+			&-button {
+				@include buttonStyles;
+				@include md(margin-top, 8px);
+				@media screen and (min-width: 890px) {
+		    		margin: 0 0 0 20px;
+		    	}
+			}
+		}
+	}
+	&-line {
+		display: block;
+		@include md(display, none);
+	}
+}
+
+.nav {
+	position: absolute;
+	top: 44%;
+	@include md(position, static);
+	&__list {
+		border: 1px solid #E5EDF3;
+		border-radius: 4px;
+		background: #fff;
+		z-index: 100;
+		width: 190px;
+		padding: 0 18px;
+		@include md(border, none);
+		@include md(z-index, auto);
+		@include md(background, none);
+		@include md(display, flex);
+	}
+	&__item {
+		padding-bottom: 15px;
+		@include md(display, flex);
+		@include md(padding, 0 10px 0);
+		@include md(align-items, center);
+		&-link {
+			white-space: nowrap;
+			font-family: $fontRoboto;
+			font-size: rem(14px);
+			color: $additionalBlueColor;
+			font-weight: 500;
+			@include xl(font-size, rem(16px));
+		}
+	}
+	&-title {
+		font-family: $fontRoboto;
+		font-weight: 500;
+		font-size: rem(20px);
+		color: #5E6875;
+		padding: 14px 0 28px 0;
+	}
+}
+
+.logo {
+	justify-content: center;
+	margin: 0 auto;
+	@include md(margin, 0);
+	&-link {
+		&-pic {
+			@include md(width, 85px);
+			@include md(width, auto);
+		}
+	}
+}
+
+.navOpen {
+	position: absolute;
+	font-size: rem(25px);
+	color: $mainBlueColor;
+}
+.navClose {
+	font-size: rem(25px);
+	position: absolute;
+	right: 10px;
+	top: 15px;
+}
+
+.fade-enter-active, .fade-leave-active {
+	transition: opacity .2s ease;
+}
+
+.fade-enter, .fade-leave-to {
+	opacity: 0;
+}
